@@ -1,0 +1,9 @@
+{
+  "name": "@portfolio-2022/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^2.8.0"
+  }
+}
