@@ -1,0 +1,17 @@
+{
+  "name": "@portfolio-2022/theme",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "csstype": "^3.1.1"
+  },
+  "devDependencies": {
+    "@portfolio-2022/tsconfig": "workspace:*",
+    "typescript": "^4.9.3"
+  }
+}

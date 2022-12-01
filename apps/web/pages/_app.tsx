@@ -1,8 +1,8 @@
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { AppProps } from 'next/app';
-import { theme } from '../app/theme';
 import { DefaultStyle } from '../app/components/default-style';
+import { theme } from '@portfolio-2022/theme';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 

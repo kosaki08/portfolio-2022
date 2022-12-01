@@ -1,7 +1,7 @@
 import { Global, Theme } from '@emotion/react';
 import { Interpolation } from '@emotion/styled';
+import { theme } from '@portfolio-2022/theme';
 import { FC } from 'react';
-import { theme } from '../../theme';
 
 const defaultStyles: Interpolation<Theme> = () => ({
   '*': {
