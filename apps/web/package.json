@@ -1,7 +1,7 @@
 {
   "name": "@portfolio-2022/web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
