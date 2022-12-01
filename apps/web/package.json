@@ -1,7 +1,8 @@
 {
-  "name": "web",
-  "version": "0.0.0",
+  "name": "@portfolio-2022/web",
   "private": true,
+  "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,19 +10,19 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@portfolio-2022/ui": "workspace:*",
     "next": "13.0.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "ui": "workspace:*"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "eslint-config-custom": "workspace:*",
-    "eslint": "7.32.0",
-    "tsconfig": "workspace:*",
+    "@portfolio-2022/prettier-config": "workspace:*",
+    "@portfolio-2022/tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
+    "eslint": "7.32.0",
     "typescript": "^4.5.3"
   }
 }
