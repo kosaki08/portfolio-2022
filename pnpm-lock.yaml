@@ -19,7 +19,6 @@ importers:
   apps/web:
     specifiers:
       '@babel/core': ^7.0.0
-      '@portfolio-2022/prettier-config': workspace:*
       '@portfolio-2022/tsconfig': workspace:*
       '@portfolio-2022/ui': workspace:*
       '@types/node': ^17.0.12
@@ -37,7 +36,6 @@ importers:
       react-dom: 18.2.0_react@18.2.0
     devDependencies:
       '@babel/core': 7.20.5
-      '@portfolio-2022/prettier-config': link:../../packages/prettier-config
       '@portfolio-2022/tsconfig': link:../../packages/tsconfig
       '@types/node': 17.0.45
       '@types/react': 18.0.25
@@ -74,7 +72,6 @@ importers:
   packages/ui:
     specifiers:
       '@portfolio-2022/eslint-config-custom': workspace:*
-      '@portfolio-2022/prettier-config': workspace:*
       '@portfolio-2022/tsconfig': workspace:*
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
@@ -83,7 +80,6 @@ importers:
       typescript: ^4.5.2
     devDependencies:
       '@portfolio-2022/eslint-config-custom': link:../eslint-config-custom
-      '@portfolio-2022/prettier-config': link:../prettier-config
       '@portfolio-2022/tsconfig': link:../tsconfig
       '@types/react': 18.0.25
       '@types/react-dom': 18.0.9

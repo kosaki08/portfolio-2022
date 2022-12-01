@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
-    "@portfolio-2022/prettier-config": "workspace:*",
     "@portfolio-2022/tsconfig": "workspace:*",
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
