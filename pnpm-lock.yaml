@@ -60,12 +60,6 @@ importers:
     devDependencies:
       typescript: 4.9.3
 
-  packages/prettier-config:
-    specifiers:
-      prettier: ^2.8.0
-    devDependencies:
-      prettier: 2.8.0
-
   packages/tsconfig:
     specifiers: {}
 
