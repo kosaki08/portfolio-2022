@@ -1,9 +1,25 @@
+import Image from 'next/image';
+import { MainVisual } from '../app/components/main-visual';
 import { Contents, ContentWrapper, Inner, Main } from '../app/components/sub-pages/elements';
+import { SVGText } from '../app/components/main-visual/svg-text';
+import aboutImg from '../app/assets/images/about/about_1.jpg';
 
 export default function About() {
   return (
     <Main>
       <Inner>
+        <MainVisual>
+          <SVGText page="about" />
+          <Image
+            src={aboutImg}
+            alt="About"
+            sizes="100vw"
+            fill
+            style={{
+              objectPosition: '50% 70%',
+            }}
+          />
+        </MainVisual>
         <ContentWrapper>
           <Contents>
             <h2>ウェブ制作</h2>
