@@ -1,7 +1,7 @@
 {
   "name": "@portfolio-2022/ui",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "./index.ts",
   "types": "./index.ts",
   "license": "MIT",

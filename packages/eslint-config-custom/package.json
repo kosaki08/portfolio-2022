@@ -1,10 +1,10 @@
 {
   "name": "@portfolio-2022/eslint-config-custom",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
-  "dependencies": {
+  "peerDependencies": {
     "eslint": "^7.23.0",
     "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "^8.3.0",
