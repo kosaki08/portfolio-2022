@@ -11,10 +11,11 @@
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "prepare": "husky install",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,js,md}\"",
+    "check-format": "prettier --list-different \"**/*.{ts,tsx,js,md}\""
   },
   "devDependencies": {
-    "eslint-config-custom": "workspace:*",
+    "@portfolio-2022/eslint-config-custom": "workspace:*",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.4",
     "prettier": "latest",

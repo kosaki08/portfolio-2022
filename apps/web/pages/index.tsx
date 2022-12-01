@@ -1,4 +1,4 @@
-import { Button } from 'ui';
+import { Button } from '@portfolio-2022/ui';
 
 export default function Web() {
   return (
