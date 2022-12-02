@@ -6,6 +6,12 @@ import { theme } from '@portfolio-2022/theme';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 
+const portal = typeof document !== 'undefined' && document.createElement('div');
+if (portal) {
+  portal.id = 'portal';
+  document.body.appendChild(portal);
+}
+
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
   return (
