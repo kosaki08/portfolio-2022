@@ -1,6 +1,6 @@
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
-import { getMediaQuery } from '../../utils/media-query';
+import { getMediaQuery } from '@portfolio-2022/utils';
 
 export const Main = styled.main(() => ({
   display: 'flex',

@@ -1,8 +1,6 @@
-import * as React from 'react';
-import { ImageProps } from 'next/image';
 import styled from '@emotion/styled';
-import { getMediaQuery } from '../../utils/media-query';
 import { withTheme } from '@emotion/react';
+import { getMediaQuery } from '@portfolio-2022/utils';
 
 export const MainVisualRoot = styled.div(() => ({
   position: 'relative',

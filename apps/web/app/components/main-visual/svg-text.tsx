@@ -2,7 +2,7 @@ import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { FC } from 'react';
 import { StaticPageKey } from '../../constants';
-import { getMediaQuery } from '../../utils/media-query';
+import { getMediaQuery } from '@portfolio-2022/utils';
 
 const Root = withTheme(
   styled.div(({ theme }) => ({

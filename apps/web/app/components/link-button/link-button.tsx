@@ -2,7 +2,7 @@ import { FC, ReactNode } from 'react';
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import Link, { LinkProps } from 'next/link';
-import { getMediaQuery } from '../../utils/media-query';
+import { getMediaQuery } from '@portfolio-2022/utils';
 
 const StyledLink = withTheme(
   styled(Link)(({ theme }) => ({
