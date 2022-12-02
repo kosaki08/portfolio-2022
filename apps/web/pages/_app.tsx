@@ -1,6 +1,7 @@
+import { AppProps } from 'next/app';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
-import { AppProps } from 'next/app';
+import { AnimatePresence } from 'framer-motion';
 import { theme } from '@portfolio-2022/theme';
 import { DefaultStyle } from '../app/components/default-style';
 import { NavLinks } from '../app/components/nav-links';
@@ -22,11 +23,13 @@ export default function App(props: AppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <DefaultStyle />
-        <Component {...pageProps} />
-        <SiteTitle>{myName}</SiteTitle>
-        <NavLinks />
-        <HamburgerMenu />
+        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+          <DefaultStyle />
+          <Component {...pageProps} />
+          <SiteTitle>{myName}</SiteTitle>
+          <NavLinks />
+          <HamburgerMenu />
+        </AnimatePresence>
       </ThemeProvider>
     </CacheProvider>
   );
