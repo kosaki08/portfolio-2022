@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import { MainVisual, SVGText } from '../app/components/sub-pages/main-visual';
 import { Contents, ContentWrapper, Inner, Main } from '../app/components/sub-pages/elements';
-import aboutImg from '../app/assets/images/about/about_1.jpg';
 import { PageContainer } from '../app/components/page-container';
+import { NextPageNav } from '../app/components/next-page-nav';
+import aboutImg from '../app/assets/images/about/about_1.jpg';
+import contactImg from '../app/assets/images/contact/contact_1.jpg';
 
 export default function About() {
   return (
@@ -51,6 +53,7 @@ export default function About() {
             </Contents>
           </ContentWrapper>
         </Inner>
+        <NextPageNav href="/contact" src={contactImg} text="Next Page" />
       </Main>
     </PageContainer>
   );
