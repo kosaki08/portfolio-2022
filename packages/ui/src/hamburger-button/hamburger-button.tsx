@@ -19,3 +19,4 @@ export const HamburgerButton: FC<HamburgerMenuProps> = (props) => {
     </Root>
   );
 };
+HamburgerButton.displayName = 'HamburgerButton';

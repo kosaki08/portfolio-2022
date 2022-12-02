@@ -44,4 +44,4 @@ export const MainVisual: React.FC<MainVisualProps> = (props) => {
     </MainVisualRoot>
   );
 };
-MainVisualRoot.displayName = 'MainVisual';
+MainVisual.displayName = 'MainVisual';

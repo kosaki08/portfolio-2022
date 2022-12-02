@@ -25,8 +25,7 @@ export default function About() {
             <p>
               これまでウェブサイトの制作では、有名企業のサイト制作からQ&Aサイト、通販サイト、会員制サイト、素材ダウンロードサイトなど幅広く制作してきました。
               どのような案件でも、見やすく分かりやすい、ユーザーフレンドリーなサイト制作を心がけています。
-              <br />※ 当サイトは Remix.js (React.js) / Prisma.js (SQLite) 等で制作しています。Next.js や Vue.js、WordPress
-              サイトの制作についてもおまかせ下さい。
+              <br />※ 当サイトは Next.js (React.js)で制作しています。Vue.js、WordPress サイトの制作についてもおまかせ下さい。
             </p>
             <h2>SEO対策</h2>
             <p>

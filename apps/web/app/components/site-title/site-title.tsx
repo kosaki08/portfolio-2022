@@ -57,7 +57,7 @@ export interface TitleProps {
   children: string;
 }
 
-export const Title: FC<TitleProps> = (props) => {
+export const SiteTitle: FC<TitleProps> = (props) => {
   const { children } = props;
   return (
     <Root>
@@ -67,4 +67,4 @@ export const Title: FC<TitleProps> = (props) => {
     </Root>
   );
 };
-Title.displayName = 'Title';
+SiteTitle.displayName = 'SiteTitle';
