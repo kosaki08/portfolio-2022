@@ -22,7 +22,7 @@ importers:
       '@emotion/cache': ^11.10.5
       '@emotion/react': ^11.10.5
       '@emotion/styled': ^11.10.5
-      '@portfolio-2022/theme': workspace:^1.0.0
+      '@portfolio-2022/theme': workspace:^*
       '@portfolio-2022/tsconfig': workspace:*
       '@portfolio-2022/ui': workspace:*
       '@types/node': ^17.0.12
@@ -61,7 +61,7 @@ importers:
     specifiers:
       '@emotion/react': ^11.10.5
       '@emotion/styled': ^11.10.5
-      '@portfolio-2022/tsconfig': workspace:^1.0.0
+      '@portfolio-2022/tsconfig': workspace:*
       csstype: ^3.1.1
       typescript: ^4.9.3
     dependencies:
@@ -78,12 +78,17 @@ importers:
   packages/ui:
     specifiers:
       '@portfolio-2022/eslint-config-custom': workspace:*
+      '@portfolio-2022/theme': workspace:^*
       '@portfolio-2022/tsconfig': workspace:*
+      '@portfolio-2022/utils': workspace:^*
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       eslint: ^7.32.0
       react: ^18.2.0
       typescript: ^4.5.2
+    dependencies:
+      '@portfolio-2022/theme': link:../theme
+      '@portfolio-2022/utils': link:../utils
     devDependencies:
       '@portfolio-2022/eslint-config-custom': link:../eslint-config-custom
       '@portfolio-2022/tsconfig': link:../tsconfig
@@ -92,6 +97,15 @@ importers:
       eslint: 7.32.0
       react: 18.2.0
       typescript: 4.9.3
+
+  packages/utils:
+    specifiers:
+      '@portfolio-2022/theme': workspace:^*
+      '@portfolio-2022/tsconfig': workspace:^*
+    dependencies:
+      '@portfolio-2022/theme': link:../theme
+    devDependencies:
+      '@portfolio-2022/tsconfig': link:../tsconfig
 
 packages:
 

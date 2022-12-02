@@ -1,0 +1,14 @@
+{
+  "name": "@portfolio-2022/utils",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@portfolio-2022/theme": "workspace:^*"
+  },
+  "devDependencies": {
+    "@portfolio-2022/tsconfig": "workspace:^*"
+  }
+}

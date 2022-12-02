@@ -79,3 +79,5 @@ export const theme: Theme = {
   animationDuration,
   animationTimingFunction,
 };
+
+export type { Theme };
