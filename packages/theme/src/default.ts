@@ -11,9 +11,9 @@ const fontSizes: Theme['fontSizes'] = {
 };
 
 const fontFamilies: Theme['fontFamilies'] = {
-  default: `'Noto Sans JP', 'Montserrat Light', sans-serif`,
-  primary: `'Montserrat Light'`,
-  secondary: `'Fjalla One'`,
+  default: `var(--font-noto-sans), var(--font-montserrat), sans-serif`,
+  primary: `var(--font-montserrat), var(--font-noto-sans), sans-serif`,
+  secondary: `var(--font-fjalla), var(--font-noto-sans), sans-serif`,
 };
 
 const letterSpacings: Theme['letterSpacings'] = {

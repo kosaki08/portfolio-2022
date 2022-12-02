@@ -22,6 +22,7 @@ importers:
       '@emotion/cache': ^11.10.5
       '@emotion/react': ^11.10.5
       '@emotion/styled': ^11.10.5
+      '@next/font': ^13.0.6
       '@portfolio-2022/theme': workspace:^*
       '@portfolio-2022/tsconfig': workspace:*
       '@portfolio-2022/ui': workspace:*
@@ -38,6 +39,7 @@ importers:
       '@emotion/cache': 11.10.5
       '@emotion/react': 11.10.5_hebjedjhazelsvuzebr6t7ng24
       '@emotion/styled': 11.10.5_5tjec44ezuvlpkchcqgxkxryqi
+      '@next/font': 13.0.6
       '@portfolio-2022/theme': link:../../packages/theme
       '@portfolio-2022/ui': link:../../packages/ui
       '@portfolio-2022/utils': link:../../packages/utils
@@ -592,6 +594,10 @@ packages:
 
   /@next/env/13.0.0:
     resolution: {integrity: sha512-65v9BVuah2Mplohm4+efsKEnoEuhmlGm8B2w6vD1geeEP2wXtlSJCvR/cCRJ3fD8wzCQBV41VcMBQeYET6MRkg==}
+    dev: false
+
+  /@next/font/13.0.6:
+    resolution: {integrity: sha512-5vxNmvnV0CbYjQGtztD5Axft9C7npKihbQpiFhnDwdb99f9K/QSFfcJqxz0E5QBkf67O2niVGJ5lApJDu78w0w==}
     dev: false
 
   /@next/swc-android-arm-eabi/13.0.0:

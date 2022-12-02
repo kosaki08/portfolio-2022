@@ -22,11 +22,11 @@ export default function App(props: AppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
+        <DefaultStyle />
         <Component {...pageProps} />
         <Title>{myName}</Title>
         <NavLinks />
         <HamburgerMenu />
-        <DefaultStyle />
       </ThemeProvider>
     </CacheProvider>
   );
