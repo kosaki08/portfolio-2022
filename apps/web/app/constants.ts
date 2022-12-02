@@ -1,3 +1,5 @@
+export const myName = 'Kazunori Osaki';
+
 export const staticPageKeys = ['about', 'works', 'contact'] as const;
 export type StaticPageKey = typeof staticPageKeys[number];
 

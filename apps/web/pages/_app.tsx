@@ -5,6 +5,8 @@ import { theme } from '@portfolio-2022/theme';
 import { DefaultStyle } from '../app/components/default-style';
 import { NavLinks } from '../app/components/nav-links';
 import { HamburgerMenu } from '../app/components/hamburger-menu';
+import { Title } from '../app/components/site-title';
+import { myName } from '../app/constants';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 
@@ -21,6 +23,7 @@ export default function App(props: AppProps) {
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+        <Title>{myName}</Title>
         <NavLinks />
         <HamburgerMenu />
         <DefaultStyle />
