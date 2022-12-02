@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { MainVisual } from '../app/components/main-visual';
+import { MainVisual, SVGText } from '../app/components/sub-pages/main-visual';
 import { Inner, ContentWrapper, Contents, Main } from '../app/components/sub-pages/elements';
-import { SVGText } from '../app/components/main-visual/svg-text';
 import contactImg from '../app/assets/images/contact/contact_1.jpg';
 
 export default function Contact() {

@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import { MainVisual } from '../../app/components/main-visual';
+import { MainVisual, SVGText } from '../../app/components/sub-pages/main-visual';
 import { Contents, ContentWrapper, Inner, Main } from '../../app/components/sub-pages/elements';
-import { SVGText } from '../../app/components/main-visual/svg-text';
 import worksImg from '../../app/assets/images/works/works_1.jpg';
 
 export default function Works() {
