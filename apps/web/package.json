@@ -13,7 +13,11 @@
     "@emotion/cache": "^11.10.5",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@next/font": "^13.0.6",
+    "@portfolio-2022/theme": "workspace:^*",
     "@portfolio-2022/ui": "workspace:*",
+    "@portfolio-2022/utils": "workspace:^*",
+    "framer-motion": "^7.6.17",
     "next": "13.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"

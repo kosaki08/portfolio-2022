@@ -1,0 +1,5 @@
+{
+  "extends": "@portfolio-2022/tsconfig/react-library.json",
+  "include": ["src", "**/*.ts"],
+  "exclude": ["node_modules"]
+}

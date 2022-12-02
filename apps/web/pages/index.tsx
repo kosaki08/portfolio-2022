@@ -1,12 +1,11 @@
-import { Button } from '@portfolio-2022/ui';
 import { LinkButton } from '../app/components/link-button';
+import { PageContainer } from '../app/components/page-container';
 
 export default function Web() {
   return (
-    <div>
+    <PageContainer>
       <h1>Web</h1>
-      <Button />
       <LinkButton href="/works">Works</LinkButton>
-    </div>
+    </PageContainer>
   );
 }

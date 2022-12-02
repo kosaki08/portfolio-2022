@@ -3,6 +3,6 @@
     "jsx": "react"
   },
   "extends": "@portfolio-2022/tsconfig/react-library.json",
-  "include": ["."],
+  "include": [".", "src"],
   "exclude": ["dist", "build", "node_modules"]
 }

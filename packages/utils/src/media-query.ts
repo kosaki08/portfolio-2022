@@ -1,5 +1,5 @@
-import { BreakPoint } from '../@types/emotion';
-import { theme } from '../theme';
+import { theme } from '@portfolio-2022/theme';
+import { BreakPoint } from '@portfolio-2022/theme/@types/emotion';
 
 export const getMediaQuery = (breakPoint: BreakPoint): string => {
   switch (breakPoint) {

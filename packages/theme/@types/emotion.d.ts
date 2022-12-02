@@ -4,7 +4,7 @@ import { Property } from 'csstype';
 export type FontSize = 'xxxLarge' | 'xxLarge' | 'xLarge' | 'large' | 'regular' | 'small' | 'xSmall';
 export type FontFamily = 'default' | 'primary' | 'secondary';
 export type ColorPalette = 'white' | 'greyPlusTwo' | 'greyPlusOne' | 'grey' | 'greyMinusOne' | 'greyMinusTwo' | 'black';
-export type ZIndex = 'higher' | 'high' | 'middle' | 'low';
+export type ZIndex = 'highest' | 'higher' | 'high' | 'middle' | 'low';
 export type Elevation = 'high' | 'middle' | 'low';
 export type BorderRadius = 'middle' | 'high';
 export type BreakPoint = 'sm' | 'md' | 'lg' | 'xl';

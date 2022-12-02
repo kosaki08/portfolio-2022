@@ -1,7 +1,19 @@
 import { Global, Theme } from '@emotion/react';
 import { Interpolation } from '@emotion/styled';
+import { Montserrat, Noto_Sans_JP, Fjalla_One } from '@next/font/google';
+import { theme } from '@portfolio-2022/theme';
 import { FC } from 'react';
-import { theme } from '../../theme';
+
+const montserrat = Montserrat({ subsets: ['latin'], weight: '600', display: 'swap' });
+const noto_sans_jp = Noto_Sans_JP({ subsets: ['japanese'], weight: '400', display: 'swap' });
+const fjalla = Fjalla_One({ subsets: ['latin'], weight: '400', display: 'swap' });
+
+const fontStyles: Interpolation<Theme> = `
+ :root {
+   --font-noto-sans: ${noto_sans_jp.style.fontFamily};
+   --font-montserrat: ${montserrat.style.fontFamily};
+   --font-fjalla: ${fjalla.style.fontFamily};
+ }`;
 
 const defaultStyles: Interpolation<Theme> = () => ({
   '*': {
@@ -55,6 +67,6 @@ const home: Interpolation<Theme> = () => ({
 });
 
 export const DefaultStyle: FC = () => {
-  return <Global styles={[defaultStyles, home]} />;
+  return <Global styles={[fontStyles, defaultStyles, home]} />;
 };
 DefaultStyle.displayName = 'DefaultStyle';
