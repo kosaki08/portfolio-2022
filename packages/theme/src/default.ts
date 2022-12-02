@@ -31,6 +31,7 @@ const colorPalettes: Theme['colorPalettes'] = {
 };
 
 const zIndexes: Theme['zIndexes'] = {
+  highest: 99,
   higher: 50,
   high: 40,
   middle: 20,
