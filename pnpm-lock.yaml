@@ -25,6 +25,7 @@ importers:
       '@portfolio-2022/theme': workspace:^*
       '@portfolio-2022/tsconfig': workspace:*
       '@portfolio-2022/ui': workspace:*
+      '@portfolio-2022/utils': workspace:^*
       '@types/node': ^17.0.12
       '@types/react': ^18.0.22
       '@types/react-dom': ^18.0.7
@@ -39,6 +40,7 @@ importers:
       '@emotion/styled': 11.10.5_5tjec44ezuvlpkchcqgxkxryqi
       '@portfolio-2022/theme': link:../../packages/theme
       '@portfolio-2022/ui': link:../../packages/ui
+      '@portfolio-2022/utils': link:../../packages/utils
       next: 13.0.0_672uxklweod7ene3nqtsh262ca
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -102,10 +104,12 @@ importers:
     specifiers:
       '@portfolio-2022/theme': workspace:^*
       '@portfolio-2022/tsconfig': workspace:^*
+      '@types/node': ^17.0.12
     dependencies:
       '@portfolio-2022/theme': link:../theme
     devDependencies:
       '@portfolio-2022/tsconfig': link:../tsconfig
+      '@types/node': 17.0.45
 
 packages:
 

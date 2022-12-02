@@ -9,6 +9,7 @@
     "@portfolio-2022/theme": "workspace:^*"
   },
   "devDependencies": {
-    "@portfolio-2022/tsconfig": "workspace:^*"
+    "@portfolio-2022/tsconfig": "workspace:^*",
+    "@types/node": "^17.0.12"
   }
 }

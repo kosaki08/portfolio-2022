@@ -1,47 +1,44 @@
-import { withTheme, styled, Interpolation, Theme } from '@portfolio-2022/theme';
+import { withTheme, styled, Interpolation, theme } from '@portfolio-2022/theme';
 import { getMediaQuery } from '@portfolio-2022/utils';
 import { BUTTON_HEIGHT, BUTTON_WIDTH } from './hamburger-button';
 
 interface StyleProps {
-  theme: Theme;
   isOpen: boolean;
 }
 
-export const Button = withTheme(
-  styled.button<StyleProps>(
-    ({ theme }) => ({
-      position: 'fixed',
-      top: '2rem',
-      right: '1rem',
-      height: `${BUTTON_HEIGHT}rem`,
-      width: `${BUTTON_WIDTH}rem`,
-      cursor: 'pointer',
-      zIndex: theme.zIndexes.higher,
-      '&:focus': {
-        outline: 'none',
-      },
-      [getMediaQuery('md')]: {
-        top: '2.5rem',
-        right: '2.5rem',
-      },
-    }),
-    ({ isOpen, theme }) =>
-      !isOpen
-        ? {
-            '&:hover span': {
-              width: '100%',
-            },
-          }
-        : {
-            transition: `transform ${theme.animationDuration.default} ${theme.animationTimingFunction.default}`,
-            '&:hover': {
-              transform: 'scale(.9)',
-            },
+export const Root: React.FC<StyleProps> = styled.button(
+  () => ({
+    position: 'fixed',
+    top: '2rem',
+    right: '1rem',
+    height: `${BUTTON_HEIGHT}rem`,
+    width: `${BUTTON_WIDTH}rem`,
+    cursor: 'pointer',
+    zIndex: theme.zIndexes.higher,
+    '&:focus': {
+      outline: 'none',
+    },
+    [getMediaQuery('md')]: {
+      top: '2.5rem',
+      right: '2.5rem',
+    },
+  }),
+  ({ isOpen }) =>
+    !isOpen
+      ? {
+          '&:hover span': {
+            width: '100%',
           },
-  ),
+        }
+      : {
+          transition: `transform ${theme.animationDuration.default} ${theme.animationTimingFunction.default}`,
+          '&:hover': {
+            transform: 'scale(.9)',
+          },
+        },
 );
 
-const LineBase: Interpolation<StyleProps> = ({ theme }) => ({
+const LineBase: Interpolation<StyleProps> = () => ({
   position: 'absolute',
   right: 0,
   height: '.125rem',
@@ -93,4 +90,4 @@ const LineOpened: Interpolation<StyleProps> = ({ isOpen }) =>
       }
     : {};
 
-export const Span = withTheme(styled.span([LineBase, LineClosed, LineOpened]));
+export const Lines: React.FC<StyleProps> = styled.span([LineBase, LineClosed, LineOpened]);
