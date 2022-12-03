@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { withTheme } from '@emotion/react';
 import { getMediaQuery } from '@portfolio-2022/utils';
 
-export const MainVisualRoot = styled.div(() => ({
+const Root = styled.div(() => ({
   position: 'relative',
   marginBottom: '2rem',
   [getMediaQuery('md')]: {
@@ -11,7 +11,7 @@ export const MainVisualRoot = styled.div(() => ({
   },
 }));
 
-export const MainVisualInner = withTheme(
+const MainVisualInner = withTheme(
   styled.div(({ theme }) => ({
     overflow: 'hidden',
     width: '100%',
@@ -39,9 +39,9 @@ export interface MainVisualProps {
 export const MainVisual: React.FC<MainVisualProps> = (props) => {
   const { children } = props;
   return (
-    <MainVisualRoot>
+    <Root>
       <MainVisualInner>{children}</MainVisualInner>
-    </MainVisualRoot>
+    </Root>
   );
 };
 MainVisual.displayName = 'MainVisual';
