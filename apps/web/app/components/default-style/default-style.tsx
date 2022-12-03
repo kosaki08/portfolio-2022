@@ -9,10 +9,10 @@ const noto_sans_jp = Noto_Sans_JP({ subsets: ['japanese'], weight: '400', displa
 const fjalla = Fjalla_One({ subsets: ['latin'], weight: '400', display: 'swap' });
 
 const fontStyles: Interpolation<Theme> = `
- :root {
-   --font-noto-sans: ${noto_sans_jp.style.fontFamily};
-   --font-montserrat: ${montserrat.style.fontFamily};
-   --font-fjalla: ${fjalla.style.fontFamily};
+  :root {
+    --font-noto-sans: ${noto_sans_jp.style.fontFamily};
+    --font-montserrat: ${montserrat.style.fontFamily};
+    --font-fjalla: ${fjalla.style.fontFamily};
  }`;
 
 const defaultStyles: Interpolation<Theme> = () => ({
@@ -60,13 +60,7 @@ const defaultStyles: Interpolation<Theme> = () => ({
   },
 });
 
-const home: Interpolation<Theme> = () => ({
-  'body.home': {
-    overflow: 'hidden',
-  },
-});
-
 export const DefaultStyle: FC = () => {
-  return <Global styles={[fontStyles, defaultStyles, home]} />;
+  return <Global styles={[fontStyles, defaultStyles]} />;
 };
 DefaultStyle.displayName = 'DefaultStyle';

@@ -1,16 +1,18 @@
 import { theme } from '@portfolio-2022/theme';
 import { BreakPoint } from '@portfolio-2022/theme/@types/emotion';
 
-export const getMediaQuery = (breakPoint: BreakPoint): string => {
+type Target = 'min-width' | 'min-height' | 'max-width' | 'max-height';
+
+export const getMediaQuery = (breakPoint: BreakPoint, target: Target = 'min-width'): string => {
   switch (breakPoint) {
     case 'xl':
-      return `@media (min-width: ${theme.breakPoints.xl}px)`;
+      return `@media (${target}: ${theme.breakPoints.xl}px)`;
     case 'lg':
-      return `@media (min-width: ${theme.breakPoints.lg}px)`;
+      return `@media (${target}: ${theme.breakPoints.lg}px)`;
     case 'md':
-      return `@media (min-width: ${theme.breakPoints.md}px)`;
+      return `@media (${target}: ${theme.breakPoints.md}px)`;
     case 'sm':
-      return `@media (min-width: ${theme.breakPoints.sm}px)`;
+      return `@media (${target}: ${theme.breakPoints.sm}px)`;
     default:
       throw new Error('Invalid breakpoint');
   }
