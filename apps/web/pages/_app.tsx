@@ -8,6 +8,7 @@ import { NavLinks } from '../app/components/nav-links';
 import { HamburgerMenu } from '../app/components/hamburger-menu';
 import { SiteTitle } from '../app/components/site-title';
 import { myName } from '../app/constants';
+import BGLines from '../app/components/bg-lines/bg-lines';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 
@@ -29,6 +30,7 @@ export default function App(props: AppProps) {
           <SiteTitle>{myName}</SiteTitle>
           <NavLinks />
           <HamburgerMenu />
+          <BGLines />
         </AnimatePresence>
       </ThemeProvider>
     </CacheProvider>

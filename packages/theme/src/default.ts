@@ -22,11 +22,12 @@ const letterSpacings: Theme['letterSpacings'] = {
 
 const colorPalettes: Theme['colorPalettes'] = {
   white: '#ffffff',
-  greyPlusTwo: '#1f1f1f',
-  greyPlusOne: '#212121',
-  grey: '#4A4A4A',
-  greyMinusOne: '#888888',
   greyMinusTwo: '#D1D5D8',
+  greyMinusOne: '#888888',
+  grey: '#4A4A4A',
+  greyPlusOne: '#212121',
+  greyPlusTwo: '#1f1f1f',
+  greyPlusThree: '#181818',
   black: '#000000',
 };
 
