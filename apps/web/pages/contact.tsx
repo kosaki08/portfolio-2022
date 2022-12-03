@@ -3,6 +3,7 @@ import { MainVisual, SVGText } from '../app/components/sub-pages/main-visual';
 import { Inner, ContentWrapper, Contents, Main } from '../app/components/sub-pages/elements';
 import contactImg from '../app/assets/images/contact/contact_1.jpg';
 import { PageContainer } from '../app/components/page-container';
+import { Footer } from '../app/components/sub-pages';
 
 export default function Contact() {
   return (
@@ -20,6 +21,7 @@ export default function Contact() {
             </Contents>
           </ContentWrapper>
         </Inner>
+        <Footer />
       </Main>
     </PageContainer>
   );

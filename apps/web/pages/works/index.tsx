@@ -5,6 +5,7 @@ import { PageContainer } from '../../app/components/page-container';
 import { NextPageNav } from '../../app/components/next-page-nav';
 import worksImg from '../../app/assets/images/works/works_1.jpg';
 import aboutImg from '../../app/assets/images/about/about_1.jpg';
+import { Footer } from '../../app/components/sub-pages';
 
 export default function Works() {
   return (
@@ -22,6 +23,7 @@ export default function Works() {
           </ContentWrapper>
         </Inner>
         <NextPageNav href="/about" src={aboutImg} text="Next Page" />
+        <Footer />
       </Main>
     </PageContainer>
   );

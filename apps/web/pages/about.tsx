@@ -5,6 +5,7 @@ import { PageContainer } from '../app/components/page-container';
 import { NextPageNav } from '../app/components/next-page-nav';
 import aboutImg from '../app/assets/images/about/about_1.jpg';
 import contactImg from '../app/assets/images/contact/contact_1.jpg';
+import { Footer } from '../app/components/sub-pages';
 
 export default function About() {
   return (
@@ -54,6 +55,7 @@ export default function About() {
           </ContentWrapper>
         </Inner>
         <NextPageNav href="/contact" src={contactImg} text="Next Page" />
+        <Footer />
       </Main>
     </PageContainer>
   );
