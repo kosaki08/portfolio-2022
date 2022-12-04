@@ -12,7 +12,7 @@ const base: Interpolation<StyleProps> = () => ({
   position: 'relative',
   display: 'block',
   width: '100%',
-  height: '16rem',
+  height: '35vw',
   overflow: 'hidden',
   [getMediaQuery('md')]: {
     height: '30rem',
@@ -57,12 +57,16 @@ export const Text = withTheme(
     position: 'absolute',
     top: '50%',
     left: '50%',
-    fontSize: theme.fontSizes.xLarge,
+    fontSize: theme.fontSizes.large,
     fontFamily: theme.fontFamilies.secondary,
     textTransform: 'uppercase',
-    letterSpacing: '.8rem',
+    letterSpacing: '.6rem',
     transition: `letter-spacing ${theme.animationDuration.sleepy} ${theme.animationTimingFunction.default}`,
     transform: 'translate(-50%, -50%)',
     zIndex: theme.zIndexes.middle,
+    [getMediaQuery('md')]: {
+      fontSize: theme.fontSizes.xLarge,
+      letterSpacing: '.8rem',
+    },
   })),
 );

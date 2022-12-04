@@ -8,6 +8,7 @@ const fontSizes: Theme['fontSizes'] = {
   regular: '1rem',
   small: '.875rem',
   xSmall: '.75rem',
+  xxSmall: '.625rem',
 };
 
 const fontFamilies: Theme['fontFamilies'] = {
@@ -22,11 +23,12 @@ const letterSpacings: Theme['letterSpacings'] = {
 
 const colorPalettes: Theme['colorPalettes'] = {
   white: '#ffffff',
-  greyPlusTwo: '#1f1f1f',
-  greyPlusOne: '#212121',
-  grey: '#4A4A4A',
-  greyMinusOne: '#888888',
   greyMinusTwo: '#D1D5D8',
+  greyMinusOne: '#888888',
+  grey: '#4A4A4A',
+  greyPlusOne: '#212121',
+  greyPlusTwo: '#1f1f1f',
+  greyPlusThree: '#1b1b1b',
   black: '#000000',
 };
 

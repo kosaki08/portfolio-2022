@@ -31,14 +31,44 @@ export const ContentWrapper = withTheme(
   })),
 );
 
-export const Contents = withTheme(
+export const WorksContentWrapper = withTheme(
   styled.div(({ theme }) => ({
+    paddingLeft: '1rem',
+    paddingRight: '1rem',
+    img: {
+      boxShadow: theme.elevation.high,
+    },
     '.introduction': {
       paddingBottom: '3rem',
-      [getMediaQuery('md')]: {
+    },
+    '.img, .introduction': {
+      maxWidth: theme.breakPoints.sm,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+    '.img, .img-full': {
+      paddingBottom: '3rem',
+    },
+    '.img img': {
+      maxWidth: '100%',
+    },
+    '.img-full img': {
+      width: '100%',
+    },
+    [getMediaQuery('md')]: {
+      padding: 0,
+      '.introduction': {
+        paddingBottom: '4rem',
+      },
+      '.img, img-full': {
         paddingBottom: '6rem',
       },
     },
+  })),
+);
+
+export const Contents = withTheme(
+  styled.div(({ theme }) => ({
     h2: {
       paddingBottom: '.5rem',
       fontSize: theme.fontSizes.large,
@@ -46,10 +76,19 @@ export const Contents = withTheme(
         paddingTop: '1.5rem',
       },
     },
+    ul: {
+      marginLeft: '1rem',
+    },
     li: {
-      fontSize: theme.fontSizes.small,
       lineHeight: 1.75,
       listStyleType: 'circle',
     },
   })),
 );
+
+export const Br = styled.br(() => ({
+  display: 'none',
+  [getMediaQuery('md')]: {
+    display: 'block',
+  },
+}));

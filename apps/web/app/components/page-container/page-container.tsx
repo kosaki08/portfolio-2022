@@ -3,10 +3,11 @@ import { motion } from 'framer-motion';
 
 export interface PageContainerProps {
   children?: ReactNode;
+  style?: HTMLAttributes<HTMLDivElement>['style'];
 }
 
 export const PageContainer: FC<PageContainerProps> = (props) => {
-  const { children } = props;
+  const { children, style } = props;
   return (
     <motion.div
       initial={{ y: 50, opacity: 0 }}
@@ -17,6 +18,7 @@ export const PageContainer: FC<PageContainerProps> = (props) => {
         stiffness: 260,
         damping: 20,
       }}
+      style={style}
     >
       {children}
     </motion.div>
