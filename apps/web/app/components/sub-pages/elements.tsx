@@ -1,7 +1,6 @@
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
-import { CSSProperties } from 'react';
 
 export const Main = styled.main(() => ({
   display: 'flex',
@@ -36,6 +35,9 @@ export const WorksContentWrapper = withTheme(
   styled.div(({ theme }) => ({
     paddingLeft: '1rem',
     paddingRight: '1rem',
+    img: {
+      boxShadow: theme.elevation.high,
+    },
     '.introduction': {
       paddingBottom: '3rem',
     },
@@ -43,6 +45,9 @@ export const WorksContentWrapper = withTheme(
       maxWidth: theme.breakPoints.sm,
       marginLeft: 'auto',
       marginRight: 'auto',
+    },
+    '.img, .img-full': {
+      paddingBottom: '3rem',
     },
     '.img img': {
       maxWidth: '100%',
@@ -54,6 +59,9 @@ export const WorksContentWrapper = withTheme(
       padding: 0,
       '.introduction': {
         paddingBottom: '4rem',
+      },
+      '.img, img-full': {
+        paddingBottom: '6rem',
       },
     },
   })),
@@ -82,19 +90,5 @@ export const Br = styled.br(() => ({
   display: 'none',
   [getMediaQuery('md')]: {
     display: 'block',
-  },
-}));
-
-export const MDHidden = styled.div<{ display?: CSSProperties['display'] }>(({ display = 'inline' }) => ({
-  display: 'none',
-  [getMediaQuery('md')]: {
-    display,
-  },
-}));
-
-export const MDVisible = styled.div<{ display?: CSSProperties['display'] }>(({ display = 'inline' }) => ({
-  display,
-  [getMediaQuery('md')]: {
-    display: 'none',
   },
 }));

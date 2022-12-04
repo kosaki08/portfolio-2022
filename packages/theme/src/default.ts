@@ -28,7 +28,7 @@ const colorPalettes: Theme['colorPalettes'] = {
   grey: '#4A4A4A',
   greyPlusOne: '#212121',
   greyPlusTwo: '#1f1f1f',
-  greyPlusThree: '#181818',
+  greyPlusThree: '#1b1b1b',
   black: '#000000',
 };
 

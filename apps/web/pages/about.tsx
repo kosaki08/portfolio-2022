@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { MainVisual, SVGText } from '../app/components/sub-pages/main-visual';
-import { Br, Contents, ContentWrapper, Inner, Main, MDHidden, MDVisible } from '../app/components/sub-pages/elements';
+import { Br, Contents, ContentWrapper, Inner, Main } from '../app/components/sub-pages/elements';
 import { PageContainer } from '../app/components/page-container';
 import { NextPageNav } from '../app/components/next-page-nav';
 import aboutImg from '../app/assets/images/about/about_1.jpg';
@@ -52,10 +52,10 @@ export default function About() {
                 <li>2019年 一般社団法人 日本ディープラーニング協会 ジェネラリスト</li>
                 <li>
                   2019年 一般社団法人 日本ディープラーニング協会 第1回ハッカソン
-                  <MDVisible>&nbsp;</MDVisible>
-                  <MDHidden>
+                  <span className="visible">&nbsp;</span>
+                  <span className="hidden">
                     <br />
-                  </MDHidden>
+                  </span>
                   チーム・ニューラルポケットとして GPU EATER賞 受賞
                 </li>
                 <li>2022年 公益財団法人 日本英語検定協会 実用英語技能検定 準1級 取得</li>

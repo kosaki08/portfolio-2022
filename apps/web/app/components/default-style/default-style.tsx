@@ -66,7 +66,24 @@ const defaultStyles: Interpolation<Theme> = () => ({
   },
 });
 
+const helper: Interpolation<Theme> = () => ({
+  '.hidden': {
+    display: 'none',
+  },
+  '.visible': {
+    display: 'inline',
+  },
+  [getMediaQuery('md')]: {
+    '.hidden': {
+      display: 'inline',
+    },
+    '.visible': {
+      display: 'none',
+    },
+  },
+});
+
 export const DefaultStyle: FC = () => {
-  return <Global styles={[fontStyles, defaultStyles]} />;
+  return <Global styles={[fontStyles, defaultStyles, helper]} />;
 };
 DefaultStyle.displayName = 'DefaultStyle';

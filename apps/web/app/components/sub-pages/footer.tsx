@@ -4,7 +4,6 @@ import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
 import { myName } from '../../constants';
-import { MDVisible, MDHidden } from './elements';
 
 const Root = withTheme(
   styled.footer(({ theme }) => ({
@@ -33,10 +32,10 @@ export const Footer: FC = () => {
     <Root>
       <p>
         &copy; {`Copyright ${myName}`}
-        <MDHidden>&nbsp;</MDHidden>
-        <MDVisible>
+        <span className="hidden">&nbsp;</span>
+        <span className="visible">
           <br />
-        </MDVisible>
+        </span>
         All Rights Reserved.
       </p>
     </Root>

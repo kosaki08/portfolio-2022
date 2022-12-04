@@ -54,11 +54,17 @@ const ImgContainer = withTheme(
 
 const Details = withTheme(
   styled.div(({ theme }) => ({
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '100%',
     paddingLeft: '1rem',
     paddingRight: '1rem',
     h1: {
       fontSize: theme.fontSizes.xLarge,
       paddingBottom: '.5rem',
+      lineHeight: 1.25,
     },
     p: {
       paddingBottom: '.125rem',
@@ -77,6 +83,7 @@ const Details = withTheme(
       paddingLeft: 0,
       paddingRight: 0,
       borderRadius: theme.borderRadius.high,
+      zIndex: 0,
       h1: {
         fontSize: theme.fontSizes.xxLarge,
       },
@@ -87,15 +94,36 @@ const Details = withTheme(
   })),
 );
 
-export interface HeaderProps extends HTMLAttributes<HTMLElement> {
+const Span = withTheme(
+  styled.span(({ theme }) => ({
+    position: 'absolute',
+    top: '-3.5rem',
+    left: '1rem',
+    fontSize: '2.5rem',
+    fontFamily: theme.fontFamilies.secondary,
+    color: theme.colorPalettes.grey,
+    opacity: 0.3,
+    [getMediaQuery('md')]: {
+      top: 'auto',
+      left: 'auto',
+      right: '5rem',
+      bottom: '-1rem',
+      fontSize: 'min(8rem, 10vw)',
+      zIndex: -1,
+    },
+  })),
+);
+
+export interface WorksHeaderProps extends HTMLAttributes<HTMLElement> {
   thumbSrc: ImageProps['src'];
   title: string;
   tag: string;
+  num: string;
   link?: string;
 }
 
-export const WorksHeader: FC<HeaderProps> = (props) => {
-  const { thumbSrc, title, tag, link, ...rest } = props;
+export const WorksHeader: FC<WorksHeaderProps> = (props) => {
+  const { thumbSrc, title, tag, link, num, ...rest } = props;
   const { windowWidth } = useWindowSize();
   const tiltProps: ReactParallaxTiltProps = {
     ...tileConfig,
@@ -111,6 +139,7 @@ export const WorksHeader: FC<HeaderProps> = (props) => {
           </ImgContainer>
         </Tilt>
         <Details>
+          <Span>{num}</Span>
           <h1>{title}</h1>
           <p>{tag}</p>
           {link && (
