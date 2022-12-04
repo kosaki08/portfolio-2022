@@ -29,7 +29,9 @@ export const works: Works = {
     thumbSrc: utThumb,
     tag: 'Web / Development',
     nextPageSlug: 'business-card',
-    content: ``,
+    content: `
+<p class="introduction">紹介文が入ります</p>
+    `,
   },
   'business-card': {
     title: '個人名刺',
@@ -39,7 +41,9 @@ export const works: Works = {
     thumbSrc: utThumb,
     tag: 'Paper / Design',
     nextPageSlug: 'osozakura-image-design',
-    content: ``,
+    content: `
+<p class="introduction">紹介文が入ります</p>
+    `,
   },
   'osozakura-image-design': {
     title: '日本ワイン専門店 遅桜 イメージデザイン',
@@ -50,25 +54,25 @@ export const works: Works = {
     tag: 'Web / Paper / Design',
     nextPageSlug: 'shizuka-box',
     content: `
-<p>
+<p class="introduction">
   日本ワイン専門店『西麻布
   遅桜』様のイメージデザインを制作させていただきました。
   <br />
   『日本各地の銘品の縁（ENISHI）をつなぐ』をコンセプトに、日本生まれの高品質ワインを紹介するお店でしたので、日本のこころを大事にしたい、というお店の考えやワインへのこだわりを、デザインを通して伝えられるよう心がけました。
 </p>
-<p className="img">
+<p class="img">
   <img
     src="/images/works/osozakura-image-design/osozakura_image_design_2.jpg"
     alt="遅桜イメージデザイン"
   />
 </p>
-<p className="img-full">
+<p class="img-full">
   <img
     src="/images/works/osozakura-image-design/osozakura_image_design_1.jpg"
     alt="遅桜イメージデザイン"
   />
 </p>
-<p className="img">
+<p class="img">
   <img
     src="/images/works/osozakura-image-design/osozakura_image_design_3.jpg"
     alt="遅桜イメージデザイン"
@@ -85,11 +89,11 @@ export const works: Works = {
     tag: 'Paper / Design',
     nextPageSlug: 'osozakura',
     content: `
-<p>Shizuka Boxの紹介文が入ります</p>
-<p>
+<p class="introduction">Shizuka Boxの紹介文が入ります</p>
+<p class="img">
   <img src="/images/works/shizuka-box/shizuka_box_1.png" alt="Shizuka Box 制作例" />
 </p>
-<p>
+<p class="img">
   <img src="/images/works/shizuka-box/shizuka_box_2.png" alt="Shizuka Box 制作例" />
 </p>
     `,

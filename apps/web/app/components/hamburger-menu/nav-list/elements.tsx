@@ -21,7 +21,7 @@ export const StyledLink = withTheme(
   styled(Link)(({ theme }) => ({
     display: 'block',
     padding: '1rem',
-    fontSize: theme.fontSizes.large,
+    fontSize: theme.fontSizes.xLarge,
     fontFamily: theme.fontFamilies.secondary,
     textTransform: 'uppercase',
     transition: `transform ${theme.animationDuration.default} ${theme.animationTimingFunction.default}`,

@@ -2,6 +2,7 @@ import { Global, Theme } from '@emotion/react';
 import { Interpolation } from '@emotion/styled';
 import { Montserrat, Noto_Sans_JP, Fjalla_One } from '@next/font/google';
 import { theme } from '@portfolio-2022/theme';
+import { getMediaQuery } from '@portfolio-2022/utils';
 import { FC } from 'react';
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: '600', display: 'swap' });
@@ -46,6 +47,13 @@ const defaultStyles: Interpolation<Theme> = () => ({
     color: theme.colorPalettes.greyMinusTwo,
     textDecoration: 'none',
   },
+  'p, li, a': {
+    fontSize: theme.fontSizes.xSmall,
+    lineHeight: 1.75,
+    [getMediaQuery('md')]: {
+      fontSize: theme.fontSizes.small,
+    },
+  },
   li: {
     listStyleType: 'none',
   },
@@ -54,8 +62,6 @@ const defaultStyles: Interpolation<Theme> = () => ({
     borderWidth: 0,
   },
   p: {
-    fontSize: theme.fontSizes.small,
-    lineHeight: 1.75,
     paddingBottom: '1rem',
   },
 });

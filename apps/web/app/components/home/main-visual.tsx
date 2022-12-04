@@ -6,6 +6,7 @@ import Tilt, { ReactParallaxTiltProps } from 'react-parallax-tilt';
 import { theme } from '@portfolio-2022/theme';
 import { useWindowSize } from '../../hooks';
 import imgSrc from '../../assets/images/home/main_visual.jpg';
+import { tileConfig } from '../../tile-config';
 
 const Root = withTheme(
   styled.div(({ theme }) => ({
@@ -51,13 +52,9 @@ const ImgContainer = styled.div(() => ({
 
 export const MainVisual: FC = () => {
   const { windowWidth } = useWindowSize();
-
   const tiltProps: ReactParallaxTiltProps = {
+    ...tileConfig,
     tiltEnable: windowWidth > theme.breakPoints.md,
-    tiltMaxAngleX: 1,
-    tiltMaxAngleY: 1,
-    glareEnable: true,
-    glareMaxOpacity: 0.03,
   };
 
   return (

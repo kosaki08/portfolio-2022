@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { MainVisual, SVGText } from '../app/components/sub-pages/main-visual';
-import { Contents, ContentWrapper, Inner, Main } from '../app/components/sub-pages/elements';
+import { Br, Contents, ContentWrapper, Inner, Main, MDHidden, MDVisible } from '../app/components/sub-pages/elements';
 import { PageContainer } from '../app/components/page-container';
 import { NextPageNav } from '../app/components/next-page-nav';
 import aboutImg from '../app/assets/images/about/about_1.jpg';
@@ -46,10 +46,19 @@ export default function About() {
               </p>
               <h2>ディープラーニング</h2>
               <ul>
+                <li>2012年 公益社団法人 全国経理教育協会 上級（cf.日商簿記検定1級） 取得</li>
                 <li>2017年 Udacity Deep Learning NanoDegree 取得</li>
                 <li>2018年～ 一般社団法人 人工知能学会 個人正会員</li>
                 <li>2019年 一般社団法人 日本ディープラーニング協会 ジェネラリスト</li>
-                <li>2019年 一般社団法人 日本ディープラーニング協会 第1回ハッカソン チーム・ニューラルポケットとして GPU EATER賞 受賞</li>
+                <li>
+                  2019年 一般社団法人 日本ディープラーニング協会 第1回ハッカソン
+                  <MDVisible>&nbsp;</MDVisible>
+                  <MDHidden>
+                    <br />
+                  </MDHidden>
+                  チーム・ニューラルポケットとして GPU EATER賞 受賞
+                </li>
+                <li>2022年 公益財団法人 日本英語検定協会 実用英語技能検定 準1級 取得</li>
               </ul>
             </Contents>
           </ContentWrapper>

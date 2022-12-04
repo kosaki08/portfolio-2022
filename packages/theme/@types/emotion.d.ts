@@ -1,7 +1,7 @@
 import '@emotion/react';
 import { Property } from 'csstype';
 
-export type FontSize = 'xxxLarge' | 'xxLarge' | 'xLarge' | 'large' | 'regular' | 'small' | 'xSmall';
+export type FontSize = 'xxxLarge' | 'xxLarge' | 'xLarge' | 'large' | 'regular' | 'small' | 'xSmall' | 'xxSmall';
 export type FontFamily = 'default' | 'primary' | 'secondary';
 export type ColorPalette = 'white' | 'greyMinusTwo' | 'greyMinusOne' | 'grey' | 'greyPlusOne' | 'greyPlusTwo' | 'greyPlusThree' | 'black';
 export type ZIndex = 'highest' | 'higher' | 'high' | 'middle' | 'low';

@@ -2,7 +2,11 @@ import { FC, HTMLAttributes } from 'react';
 import Image, { ImageProps } from 'next/image';
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
+import Tilt, { ReactParallaxTiltProps } from 'react-parallax-tilt';
 import { getMediaQuery } from '@portfolio-2022/utils';
+import { theme } from '@portfolio-2022/theme';
+import { useWindowSize } from '../../../hooks';
+import { tileConfig } from '../../../tile-config';
 
 const StyledHeader = withTheme(
   styled.header(({ theme }) => ({
@@ -29,19 +33,20 @@ const Split = styled.div(() => ({
 
 const ImgContainer = withTheme(
   styled.div(({ theme }) => ({
-    position: 'relative',
-    height: 0,
     marginBottom: '1rem',
-    paddingBottom: '65%',
-    boxShadow: theme.elevation.low,
-    overflow: 'hidden',
+    img: {
+      width: '100%',
+      height: 'auto',
+    },
     [getMediaQuery('md')]: {
       marginBottom: 0,
       boxShadow: theme.elevation.middle,
-      borderRadius: theme.borderRadius.middle,
+      img: {
+        borderRadius: theme.borderRadius.middle,
+        display: 'block',
+      },
     },
     [getMediaQuery('xl')]: {
-      paddingBottom: '30rem',
       borderRadius: theme.borderRadius.high,
     },
   })),
@@ -91,12 +96,20 @@ export interface HeaderProps extends HTMLAttributes<HTMLElement> {
 
 export const WorksHeader: FC<HeaderProps> = (props) => {
   const { thumbSrc, title, tag, link, ...rest } = props;
+  const { windowWidth } = useWindowSize();
+  const tiltProps: ReactParallaxTiltProps = {
+    ...tileConfig,
+    tiltEnable: windowWidth > theme.breakPoints.md,
+  };
+
   return (
     <StyledHeader {...rest}>
       <Split>
-        <ImgContainer>
-          <Image src={thumbSrc} alt={title} />
-        </ImgContainer>
+        <Tilt {...tiltProps}>
+          <ImgContainer>
+            <Image src={thumbSrc} alt={title} />
+          </ImgContainer>
+        </Tilt>
         <Details>
           <h1>{title}</h1>
           <p>{tag}</p>

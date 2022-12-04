@@ -73,6 +73,9 @@ export const Li = withTheme(
     textTransform: 'uppercase',
     fontFamily: theme.fontFamilies.secondary,
     letterSpacing: '.05em',
+    a: {
+      fontSize: theme.fontSizes.regular,
+    },
     '&::before': {
       content: '""',
       position: 'absolute',

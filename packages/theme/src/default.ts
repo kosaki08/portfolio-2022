@@ -8,6 +8,7 @@ const fontSizes: Theme['fontSizes'] = {
   regular: '1rem',
   small: '.875rem',
   xSmall: '.75rem',
+  xxSmall: '.625rem',
 };
 
 const fontFamilies: Theme['fontFamilies'] = {

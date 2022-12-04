@@ -4,14 +4,15 @@ import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
 import { myName } from '../../constants';
+import { MDVisible, MDHidden } from './elements';
 
 const Root = withTheme(
   styled.footer(({ theme }) => ({
-    padding: '3rem 1.5rem',
+    padding: '2rem 1.5rem',
     backgroundColor: theme.colorPalettes.greyPlusOne,
     p: {
       padding: 0,
-      fontSize: theme.fontSizes.xSmall,
+      fontSize: theme.fontSizes.xxSmall,
       color: theme.colorPalettes.grey,
       textAlign: 'center',
       letterSpacing: 1,
@@ -30,7 +31,14 @@ export const Footer: FC = () => {
   }
   return (
     <Root>
-      <p>{`© Copyright ${myName} All Rights Reserved.`}</p>
+      <p>
+        &copy; {`Copyright ${myName}`}
+        <MDHidden>&nbsp;</MDHidden>
+        <MDVisible>
+          <br />
+        </MDVisible>
+        All Rights Reserved.
+      </p>
     </Root>
   );
 };
