@@ -8,8 +8,6 @@ import happyLifeThumb from '../../assets/images/works/happy-life/happy_life_11.j
 
 export interface Work {
   slug: WorksPageKey;
-  createdAt: Date;
-  updatedAt: Date;
   title: string;
   content: string;
   link?: string;
@@ -24,8 +22,6 @@ export const works: Works = {
   'ut-aim': {
     title: '株式会社 UTエイム Webパンフレット',
     slug: 'ut-aim',
-    createdAt: new Date('2021-06-01'),
-    updatedAt: new Date('2021-06-01'),
     thumbSrc: utThumb,
     tag: 'Web / Development',
     nextPageSlug: 'business-card',
@@ -36,8 +32,6 @@ export const works: Works = {
   'business-card': {
     title: '個人名刺',
     slug: 'business-card',
-    createdAt: new Date('2021-05-01'),
-    updatedAt: new Date('2021-05-01'),
     thumbSrc: utThumb,
     tag: 'Paper / Design',
     nextPageSlug: 'osozakura-image-design',
@@ -48,8 +42,6 @@ export const works: Works = {
   'osozakura-image-design': {
     title: '日本ワイン専門店 遅桜 イメージデザイン',
     slug: 'osozakura-image-design',
-    createdAt: new Date('2021-04-01'),
-    updatedAt: new Date('2021-04-01'),
     thumbSrc: osozakuraImageThumb,
     tag: 'Web / Paper / Design',
     nextPageSlug: 'shizuka-box',
@@ -83,8 +75,6 @@ export const works: Works = {
   'shizuka-box': {
     title: 'Shizuka Box パンフレット',
     slug: 'shizuka-box',
-    createdAt: new Date('2021-03-01'),
-    updatedAt: new Date('2021-03-01'),
     thumbSrc: shizukaBoxThumb,
     tag: 'Paper / Design',
     nextPageSlug: 'osozakura',
@@ -101,8 +91,6 @@ export const works: Works = {
   osozakura: {
     title: '日本ワイン専門店 遅桜',
     slug: 'osozakura',
-    createdAt: new Date('2022-01-02'),
-    updatedAt: new Date('2022-01-02'),
     thumbSrc: osozakuraThumb,
     tag: 'Web / Design / Development / WordPress',
     nextPageSlug: 'happy-life',
@@ -137,8 +125,6 @@ export const works: Works = {
   'happy-life': {
     title: '株式会社 犬の専門店 HappyLife',
     slug: 'happy-life',
-    createdAt: new Date('2022-01-01'),
-    updatedAt: new Date('2022-01-01'),
     thumbSrc: happyLifeThumb,
     tag: 'Web / E-Commerce / Design / Development / WordPress',
     nextPageSlug: 'ut-aim',
