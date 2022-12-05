@@ -1,73 +1,71 @@
-# Turborepo starter
+# Portfolio 2022
 
-This is an official pnpm starter turborepo.
+## Installation
 
-## What's inside?
+From your terminal:
 
-This turborepo uses [pnpm](https://pnpm.io) as a package manager. It includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run build
+```sh
+pnpm install
+pnpm prepare
 ```
 
-### Develop
+## Development
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm run dev
+```sh
+pnpm dev
 ```
 
-### Remote Caching
+## Deployment
 
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-pnpm dlx turbo login
+```sh
+pnpm build
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+## Packages
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
+- theme
+  - Theming based on Emotion.js
+- ui
+  - General UI package
+- utils
+  - General utilities
+- eslint-config-custom
+  - Basic config for ESLint
+- tsconfig
+  - Basic config for TypeScript
 
-```
-pnpm dlx turbo link
-```
+## Dependencies
 
-## Useful Links
+- Project management
+  - [Turborepo](https://turbo.build/repo): Mono-repo management build system
+- React related dependencies
+  - [Next.js](https://nextjs.org/): Web framework
+  - [Recoil](https://recoiljs.org/): State management
+  - [Emotion.js](https://emotion.sh/): CSS-in-JS
+  - [Framer Motion](https://www.framer.com/motion/): Animation library
+  - [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt): Tilt hover effect
+- 3D related dependencies
+  - [Three.js](https://threejs.org/): JavaScript 3D library
+  - [React Three Fiber](https://github.com/pmndrs/react-three-fiber): React renderer for threejs
+  - [drei](https://github.com/pmndrs/drei): React Three Fiber helpers
+  - [glslify](https://github.com/glslify/glslify): module system for GLSL
+- Development environment dependencies
+  - [TypeScript](https://www.typescriptlang.org/): Typed JavaScript
+  - [Husky](https://github.com/typicode/husky): Git hooks
+  - [ESLint](https://eslint.org/): Linter tool
+  - [Prettier](https://prettier.io/): Code formatter
 
-Learn more about the power of Turborepo:
+## Environment
 
-- [Pipelines](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+- [Node.js](https://nodejs.org/en/): JavaScript runtime
+- [pnpm](https://pnpm.io/): Package manager
+
+Version information is in `.tool-versions` file.
+
+## Special Thanks
+
+Great resources for learning.
+
+- [Three.js Journey](https://threejs-journey.com/): Three.js
+- [WebGL School](https://webgl.souhonzan.org/?category=tagged&v=school): WebGL
+- [AWWWARDS ACADEMY](https://www.awwwards.com/academy/): Web development

@@ -1,10 +1,12 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Color, Mesh, Vector3 } from 'three';
 import { Canvas } from '@react-three/fiber';
 import { Portal } from '@portfolio-2022/ui';
 import { SkullParticle } from './skull';
 import { Root } from './elements';
 import { TempButton } from './temp';
+import { useRecoilState } from 'recoil';
+import { particlesState } from '../../atoms';
 
 export interface ParticleUniforms {
   uColor1: { value: Color };
@@ -23,12 +25,13 @@ export const DURATION = 80;
 export const VELOCITY = 10;
 
 export const ParticleModel: FC = () => {
-  const [isShow, setIsShow] = useState(true);
+  const [particles] = useRecoilState(particlesState);
+  const { isShow } = particles;
 
   return (
     <Portal>
       <Root>
-        <TempButton id="temp-button" style={{ color: 'white' }} onClick={() => setIsShow((prev) => !prev)} />
+        <TempButton id="temp-button" style={{ color: 'white' }} />
         <Canvas
           camera={{
             fov: 50,

@@ -1,6 +1,7 @@
 import { Fragment } from 'react';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { RecoilRoot } from 'recoil';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { AnimatePresence } from 'framer-motion';
@@ -28,17 +29,19 @@ export default function App(props: AppProps) {
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-        <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-          <Fragment key={asPath}>
-            <DefaultStyle />
-            <Component {...pageProps} />
-            <SiteTitle>{myName}</SiteTitle>
-            <NavLinks />
-            <HamburgerMenu />
-            <BGLines />
-          </Fragment>
-        </AnimatePresence>
-        <ParticleModel />
+        <RecoilRoot>
+          <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+            <Fragment key={asPath}>
+              <DefaultStyle />
+              <Component {...pageProps} />
+              <SiteTitle>{myName}</SiteTitle>
+              <NavLinks />
+              <HamburgerMenu />
+              <BGLines />
+            </Fragment>
+          </AnimatePresence>
+          <ParticleModel />
+        </RecoilRoot>
       </ThemeProvider>
     </CacheProvider>
   );

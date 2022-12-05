@@ -25,6 +25,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-parallax-tilt": "^1.7.72",
+    "recoil": "^0.7.6",
     "three": "^0.147.0"
   },
   "devDependencies": {
