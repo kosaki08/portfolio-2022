@@ -7,7 +7,7 @@ import { useFrame, useLoader } from '@react-three/fiber';
 import { useSpring } from 'framer-motion';
 import { vertexShader, fragmentShader } from './shaders';
 import { defaultUniforms, getParticleArrays } from './utils';
-import { DURATION, ShaderMaterial, ParticleUniforms, VELOCITY } from './particle-model';
+import { DURATION, ParticleShaderMaterial, ParticleUniforms, VELOCITY } from './particle-model';
 
 export interface SkullParticleProps {
   isShow: boolean;
@@ -22,7 +22,7 @@ const skullUniforms: ParticleUniforms = {
 export const SkullParticle: FC<SkullParticleProps> = memo((props) => {
   const { isShow } = props;
   const scale = useSpring(isShow ? 1 : 0, { duration: DURATION, velocity: VELOCITY });
-  const shaderMaterial = useRef<ShaderMaterial>(null);
+  const shaderMaterial = useRef<ParticleShaderMaterial>(null);
 
   const { nodes } = useLoader(GLTFLoader, '/models/skull.glb', (loader) => {
     const dracoLoader = new DRACOLoader();

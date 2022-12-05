@@ -17,5 +17,5 @@ export const getParticleArrays = (sampler: MeshSurfaceSampler): [Float32Array, F
 
 export const defaultUniforms: Pick<ParticleUniforms, 'uScale' | 'uTime'> = {
   uTime: { value: 0 },
-  uScale: { value: 1 },
+  uScale: { value: 1.0 },
 };
