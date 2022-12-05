@@ -11,6 +11,7 @@ import { HamburgerMenu } from '../app/components/hamburger-menu';
 import { SiteTitle } from '../app/components/site-title';
 import { myName } from '../app/constants';
 import BGLines from '../app/components/bg-lines/bg-lines';
+import { ParticleModel } from '../app/components/particle-model';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 
@@ -29,14 +30,15 @@ export default function App(props: AppProps) {
       <ThemeProvider theme={theme}>
         <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
           <Fragment key={asPath}>
-          <DefaultStyle />
-          <Component {...pageProps} />
-          <SiteTitle>{myName}</SiteTitle>
-          <NavLinks />
-          <HamburgerMenu />
-          <BGLines />
+            <DefaultStyle />
+            <Component {...pageProps} />
+            <SiteTitle>{myName}</SiteTitle>
+            <NavLinks />
+            <HamburgerMenu />
+            <BGLines />
           </Fragment>
         </AnimatePresence>
+        <ParticleModel />
       </ThemeProvider>
     </CacheProvider>
   );
