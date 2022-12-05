@@ -16,7 +16,7 @@ export default function Contact() {
           </MainVisual>
           <ContentWrapper>
             <Contents>
-              <p>お仕事のご依頼やついては、以下のメールアドレスまでご連絡ください。</p>
+              <p>ご相談やお仕事のご依頼については、以下のメールアドレスまでご連絡ください。</p>
               <p>kazunoriosaki@gmail.com</p>
             </Contents>
           </ContentWrapper>

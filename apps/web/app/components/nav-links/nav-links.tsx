@@ -6,14 +6,14 @@ import { useWindowSize } from '../../hooks';
 import { Aside, Li } from './elements';
 
 export interface LinkItem {
-  to: string;
+  href: string;
   text: string;
 }
 
 const links: LinkItem[] = [
-  { to: '/works', text: 'Works' },
-  { to: '/contact', text: 'Contact' },
-  { to: '/about', text: 'About' },
+  { href: '/works', text: 'Works' },
+  { href: '/contact', text: 'Contact' },
+  { href: '/about', text: 'About' },
 ];
 
 export const NavLinks: FC = () => {
@@ -30,9 +30,9 @@ export const NavLinks: FC = () => {
         <ul>
           {links.map(
             (link) =>
-              (pathname === '/' || link.to !== pathname) && (
-                <Li key={link.to} data-link={link.to.replace('/', '')}>
-                  <Link href={`${link.to}`}>{link.text}</Link>
+              (pathname === '/' || link.href !== pathname) && (
+                <Li key={link.href} data-link={link.href.replace('/', '')}>
+                  <Link href={`${link.href}`}>{link.text}</Link>
                 </Li>
               ),
           )}

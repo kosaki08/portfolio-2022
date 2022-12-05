@@ -1,4 +1,6 @@
+import { Fragment } from 'react';
 import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { AnimatePresence } from 'framer-motion';
@@ -20,17 +22,20 @@ if (portal) {
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
+  const { asPath } = useRouter();
 
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
         <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+          <Fragment key={asPath}>
           <DefaultStyle />
           <Component {...pageProps} />
           <SiteTitle>{myName}</SiteTitle>
           <NavLinks />
           <HamburgerMenu />
           <BGLines />
+          </Fragment>
         </AnimatePresence>
       </ThemeProvider>
     </CacheProvider>

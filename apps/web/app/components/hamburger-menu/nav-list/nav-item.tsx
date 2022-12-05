@@ -1,6 +1,7 @@
+import { useRouter } from 'next/router';
 import { FC, useCallback } from 'react';
 import { LinkItem } from '../../nav-links';
-import { StyledLink } from './elements';
+import { TextWrapper } from './elements';
 import { OnClickItemCallback } from './nav-list';
 
 export interface NavItemProps {
@@ -10,17 +11,18 @@ export interface NavItemProps {
 
 export const NavItem: FC<NavItemProps> = (props) => {
   const { link, onClickItem } = props;
-  const { to, text } = link;
+  const { pathname } = useRouter();
+  const { href, text } = link;
 
   const onClickCallback = useCallback<() => void>(() => {
-    onClickItem && onClickItem({ to, text });
-  }, [to, text, onClickItem]);
+    onClickItem && onClickItem({ href, text });
+  }, [href, text, onClickItem]);
 
   return (
     <li>
-      <StyledLink href={to} onClick={onClickCallback}>
+      <TextWrapper isCurrent={pathname === href} href={href} onClick={onClickCallback}>
         {text}
-      </StyledLink>
+      </TextWrapper>
     </li>
   );
 };
