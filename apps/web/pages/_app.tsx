@@ -5,13 +5,14 @@ import { RecoilRoot, useRecoilState } from 'recoil';
 import { CacheProvider, ThemeProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import { AnimatePresence } from 'framer-motion';
+import { Leva } from 'leva';
 import { theme } from '@portfolio-2022/theme';
 import { DefaultStyle } from '../app/components/default-style';
 import { NavLinks } from '../app/components/nav-links';
 import { HamburgerMenu } from '../app/components/hamburger-menu';
 import { SiteTitle } from '../app/components/site-title';
 import { myName } from '../app/constants';
-import BGLines from '../app/components/bg-lines/bg-lines';
+import { BGLines } from '../app/components/bg-lines';
 import { ParticleModel } from '../app/components/particle-model';
 import { particlesState } from '../app/atoms';
 
@@ -30,6 +31,7 @@ export default function App(props: AppProps) {
         <RecoilRoot>
           <AppComponents {...props} />
           <ParticleModel />
+          <Leva collapsed hidden />
         </RecoilRoot>
       </ThemeProvider>
     </CacheProvider>

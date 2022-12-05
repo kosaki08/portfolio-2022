@@ -34,12 +34,10 @@ const each: Interpolation<{}> = () =>
 
 const Line = styled.div([base, each]);
 
-const BGLines: FC = () => (
+export const BGLines: FC = () => (
   <Root>
     {Array.from({ length: 4 }).map((_, v) => (
       <Line key={v} />
     ))}
   </Root>
 );
-
-export default BGLines;

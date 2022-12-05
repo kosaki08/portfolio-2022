@@ -44,12 +44,14 @@ pnpm build
   - [Emotion.js](https://emotion.sh/): CSS-in-JS
   - [Framer Motion](https://www.framer.com/motion/): Animation library
   - [React Parallax Tilt](https://github.com/mkosir/react-parallax-tilt): Tilt hover effect
-- 3D related dependencies
+  - [Leva](https://github.com/pmndrs/leva): GUI for React
+- 3D
   - [Three.js](https://threejs.org/): JavaScript 3D library
   - [React Three Fiber](https://github.com/pmndrs/react-three-fiber): React renderer for threejs
   - [drei](https://github.com/pmndrs/drei): React Three Fiber helpers
-  - [glslify](https://github.com/glslify/glslify): module system for GLSL
-- Development environment dependencies
+  - [glslify](https://github.com/glslify/glslify): Module system for GLSL
+  - [r3f-perf](https://github.com/utsuboco/r3f-perf): Performance monitor
+- Development
   - [TypeScript](https://www.typescriptlang.org/): Typed JavaScript
   - [Husky](https://github.com/typicode/husky): Git hooks
   - [ESLint](https://eslint.org/): Linter tool
