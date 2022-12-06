@@ -9,10 +9,10 @@ export const Debug: FC = () => {
     const [, setParticles] = useRecoilState(particlesState);
 
     useControls('Particle', {
-      isShow: {
+      isTransition: {
         value: true,
         onChange: (value) => {
-          setParticles((prev) => ({ ...prev, isShow: value }));
+          setParticles((prev) => ({ ...prev, isTransition: value }));
         },
       },
     });

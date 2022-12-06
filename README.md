@@ -71,3 +71,4 @@ Great resources for learning.
 - [Three.js Journey](https://threejs-journey.com/): Three.js
 - [WebGL School](https://webgl.souhonzan.org/?category=tagged&v=school): WebGL
 - [AWWWARDS ACADEMY](https://www.awwwards.com/academy/): Web development
+- [Meta Frontend Developer](https://www.coursera.org/professional-certificates/meta-front-end-developer): React development

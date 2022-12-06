@@ -28,11 +28,11 @@ export const VELOCITY = 10;
 
 export const ParticleModel: FC = () => {
   const [particles] = useRecoilState(particlesState);
-  const { isShow } = particles;
+  const { isTransition } = particles;
 
   return (
     <Portal>
-      <Root>
+      <Root isTransition={isTransition}>
         <Canvas
           camera={{
             fov: 50,
@@ -42,7 +42,7 @@ export const ParticleModel: FC = () => {
           }}
           gl={{ antialias: true, alpha: true }}
         >
-          <SkullParticle isShow={isShow} />
+          <SkullParticle isTransition={isTransition} />
           <Debug />
         </Canvas>
       </Root>

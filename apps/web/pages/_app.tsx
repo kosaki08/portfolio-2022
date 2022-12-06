@@ -45,7 +45,7 @@ const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
 
   useEffect(() => {
     const exitingFunction = () => {
-      setParticles((prev) => ({ ...prev, isShow: false }));
+      setParticles((prev) => ({ ...prev, isTransition: false }));
     };
     router.events.on('routeChangeStart', exitingFunction);
 
@@ -60,7 +60,7 @@ const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
       initial={false}
       onExitComplete={() => {
         window.scrollTo(0, 0);
-        setParticles((prev) => ({ ...prev, isShow: true }));
+        setParticles((prev) => ({ ...prev, isTransition: true }));
       }}
     >
       <Fragment key={asPath}>
