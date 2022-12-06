@@ -64,6 +64,10 @@ const defaultStyles: Interpolation<Theme> = () => ({
   p: {
     paddingBottom: '1rem',
   },
+  '::selection': {
+    backgroundColor: theme.colorPalettes.accent,
+    color: theme.colorPalettes.greyMinusTwo,
+  },
 });
 
 const helper: Interpolation<Theme> = () => ({

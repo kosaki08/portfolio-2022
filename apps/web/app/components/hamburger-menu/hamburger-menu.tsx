@@ -1,14 +1,21 @@
-import { FC, Fragment, useState } from 'react';
+import { FC, Fragment, useCallback } from 'react';
 import { HamburgerButton } from '@portfolio-2022/ui';
 import { NavList } from './nav-list';
+import { useRecoilState } from 'recoil';
+import { GlobalState } from '../../atoms';
 
 export const HamburgerMenu: FC = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [globalState, setGlobalState] = useRecoilState(GlobalState);
+  const { isMenuOpen } = globalState;
+
+  const onClickCallback = useCallback(() => {
+    setGlobalState((prev) => ({ ...prev, isMenuOpen: !prev.isMenuOpen }));
+  }, []);
 
   return (
     <Fragment>
-      <HamburgerButton onClick={() => setIsOpen((prev) => !prev)} isOpen={isOpen} />
-      {isOpen && <NavList onClickItem={() => setIsOpen(false)} />}
+      <HamburgerButton onClick={onClickCallback} isOpen={isMenuOpen} />
+      {isMenuOpen && <NavList onClickItem={onClickCallback} />}
     </Fragment>
   );
 };

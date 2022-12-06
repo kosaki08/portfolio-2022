@@ -3,7 +3,16 @@ import { Property } from 'csstype';
 
 export type FontSize = 'xxxLarge' | 'xxLarge' | 'xLarge' | 'large' | 'regular' | 'small' | 'xSmall' | 'xxSmall';
 export type FontFamily = 'default' | 'primary' | 'secondary';
-export type ColorPalette = 'white' | 'greyMinusTwo' | 'greyMinusOne' | 'grey' | 'greyPlusOne' | 'greyPlusTwo' | 'greyPlusThree' | 'black';
+export type ColorPalette =
+  | 'white'
+  | 'greyMinusTwo'
+  | 'greyMinusOne'
+  | 'grey'
+  | 'greyPlusOne'
+  | 'greyPlusTwo'
+  | 'greyPlusThree'
+  | 'black'
+  | 'accent';
 export type ZIndex = 'highest' | 'higher' | 'high' | 'middle' | 'low';
 export type Elevation = 'high' | 'middle' | 'low';
 export type BorderRadius = 'middle' | 'high';
@@ -29,7 +38,7 @@ declare module '@emotion/react' {
   };
 
   export type ZIndexes = {
-    [K in ZIndex]: Property.ZIndex;
+    [K in ZIndex]: number;
   };
 
   export type Elevations = {

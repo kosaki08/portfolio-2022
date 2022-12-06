@@ -14,7 +14,7 @@ import { SiteTitle } from '../app/components/site-title';
 import { myName } from '../app/constants';
 import { BGLines } from '../app/components/bg-lines';
 import { ParticleModel } from '../app/components/particle-model';
-import { particlesState } from '../app/atoms';
+import { GlobalState } from '../app/atoms';
 
 const emotionCache = createCache({ key: 'css', prepend: true });
 
@@ -41,11 +41,11 @@ export default function App(props: AppProps) {
 const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
   const { asPath } = useRouter();
   const router = useRouter();
-  const [, setParticles] = useRecoilState(particlesState);
+  const [, setGlobalState] = useRecoilState(GlobalState);
 
   useEffect(() => {
     const exitingFunction = () => {
-      setParticles((prev) => ({ ...prev, isTransition: false }));
+      setGlobalState((prev) => ({ ...prev, isTransition: false }));
     };
     router.events.on('routeChangeStart', exitingFunction);
 
@@ -60,7 +60,7 @@ const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
       initial={false}
       onExitComplete={() => {
         window.scrollTo(0, 0);
-        setParticles((prev) => ({ ...prev, isTransition: true }));
+        setGlobalState((prev) => ({ ...prev, isTransition: true }));
       }}
     >
       <Fragment key={asPath}>

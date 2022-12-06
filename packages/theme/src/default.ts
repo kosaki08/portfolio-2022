@@ -30,6 +30,7 @@ const colorPalettes: Theme['colorPalettes'] = {
   greyPlusTwo: '#1f1f1f',
   greyPlusThree: '#1b1b1b',
   black: '#000000',
+  accent: '#68046e',
 };
 
 const zIndexes: Theme['zIndexes'] = {
