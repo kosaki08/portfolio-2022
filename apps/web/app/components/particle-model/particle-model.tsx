@@ -22,8 +22,8 @@ export interface ParticleUniformRef {
 }
 export type ParticleShaderMaterial = ShaderMaterial & Mesh & ParticleUniformRef;
 
-export const PARTICLE_NUM = 50000;
-export const DURATION = 80;
+export const PARTICLE_NUM = 30000;
+export const DURATION = 50;
 export const VELOCITY = 10;
 
 export const ParticleModel: FC = () => {
