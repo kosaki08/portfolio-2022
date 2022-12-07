@@ -14,8 +14,16 @@ export const Nav = withTheme(
     justifyContent: 'center',
     gridColumnGap: '1rem',
     textAlign: 'center',
-    backgroundColor: theme.colorPalettes.greyPlusOne,
+    backdropFilter: 'blur(80px)',
     zIndex: theme.zIndexes.high,
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      inset: 0,
+      backgroundColor: theme.colorPalettes.black,
+      opacity: 0.25,
+      zIndex: -1,
+    },
   })),
 );
 

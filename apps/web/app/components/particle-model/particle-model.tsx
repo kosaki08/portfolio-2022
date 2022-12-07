@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber';
 import { Portal } from '@portfolio-2022/ui';
 import { SkullParticle } from './skull';
 import { Root } from './elements';
-import { particlesState } from '../../atoms';
+import { GlobalState } from '../../atoms';
 import { Debug } from './debug';
 
 export type ShaderUniforms = Shader['uniforms'];
@@ -27,12 +27,12 @@ export const DURATION = 50;
 export const VELOCITY = 10;
 
 export const ParticleModel: FC = () => {
-  const [particles] = useRecoilState(particlesState);
-  const { isTransition } = particles;
+  const [globalState] = useRecoilState(GlobalState);
+  const { isTransition, isMenuOpen } = globalState;
 
   return (
     <Portal>
-      <Root isTransition={isTransition}>
+      <Root {...{ isTransition, isMenuOpen }}>
         <Canvas
           camera={{
             fov: 50,
@@ -41,6 +41,7 @@ export const ParticleModel: FC = () => {
             position: new Vector3(0, 1, 2.7),
           }}
           gl={{ antialias: true, alpha: true }}
+          style={{ pointerEvents: 'none' }}
         >
           <SkullParticle isTransition={isTransition} />
           <Debug />

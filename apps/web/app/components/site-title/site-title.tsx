@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styled from '@emotion/styled';
 import { withTheme } from '@emotion/react';
 import { getMediaQuery } from '@portfolio-2022/utils';
+import { useRouter } from 'next/router';
 
 export const Root = withTheme(
   styled.header(({ theme }) => ({
@@ -59,11 +60,10 @@ export interface TitleProps {
 
 export const SiteTitle: FC<TitleProps> = (props) => {
   const { children } = props;
+  const { pathname } = useRouter();
   return (
     <Root>
-      <H1>
-        <Link href="/">{children}</Link>
-      </H1>
+      <H1>{pathname !== '/' ? <Link href="/">{children}</Link> : children}</H1>
     </Root>
   );
 };

@@ -2,17 +2,17 @@ import { FC, Fragment } from 'react';
 import { useRecoilState } from 'recoil';
 import { useControls } from 'leva';
 import { Perf } from 'r3f-perf';
-import { particlesState } from '../../atoms';
+import { GlobalState } from '../../atoms';
 
 export const Debug: FC = () => {
   if (process.env.NODE_ENV === 'development') {
-    const [, setParticles] = useRecoilState(particlesState);
+    const [, setGlobalState] = useRecoilState(GlobalState);
 
     useControls('Particle', {
       isTransition: {
         value: true,
         onChange: (value) => {
-          setParticles((prev) => ({ ...prev, isTransition: value }));
+          setGlobalState((prev) => ({ ...prev, isTransition: value }));
         },
       },
     });
