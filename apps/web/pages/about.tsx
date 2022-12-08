@@ -58,7 +58,6 @@ export default function About() {
                   </span>
                   チーム・ニューラルポケットとして GPU EATER賞 受賞
                 </li>
-                <li>2022年 公益財団法人 日本英語検定協会 実用英語技能検定 準1級 取得</li>
               </ul>
             </Contents>
           </ContentWrapper>

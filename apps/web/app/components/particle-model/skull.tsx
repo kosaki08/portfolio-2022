@@ -46,7 +46,6 @@ export const SkullParticle: FC<SkullParticleProps> = memo((props) => {
   return (
     <Suspense fallback={null}>
       <points rotation={[0, 0.4, 0]} scale={0.8}>
-        {/* <points rotation={[0, 0.4, 0]} scale={0.8}> */}
         <bufferGeometry attach="geometry">
           <bufferAttribute attach="attributes-position" count={particlePosition.length / 3} array={particlePosition} itemSize={3} />
           <bufferAttribute attach="attributes-aRandom" count={particleRandomness.length / 3} array={particleRandomness} itemSize={3} />

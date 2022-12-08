@@ -2,7 +2,6 @@ import { WorksPageKey } from './../../constants';
 import { ImageProps } from 'next/image';
 import utThumb from '../../assets/images/works/ut-aim/ut_aim_1.png';
 import osozakuraImageThumb from '../../assets/images/works/osozakura-image/osozakura_image_design_4.jpg';
-import shizukaBoxThumb from '../../assets/images/works/shizuka-box/shizuka_box_3.png';
 import osozakuraThumb from '../../assets/images/works/osozakura/osozakura_12.jpg';
 import happyLifeThumb from '../../assets/images/works/happy-life/happy_life_11.jpg';
 
@@ -25,6 +24,7 @@ export const works: Works = {
     thumbSrc: utThumb,
     tag: 'Web / Development',
     nextPageSlug: 'business-card',
+    link: 'http://ut-g.com/linemensetsu/web-pamphlet/',
     content: `
 <p class="introduction">紹介文が入ります</p>
     `,
@@ -44,7 +44,7 @@ export const works: Works = {
     slug: 'osozakura-image-design',
     thumbSrc: osozakuraImageThumb,
     tag: 'Web / Paper / Design',
-    nextPageSlug: 'shizuka-box',
+    nextPageSlug: 'happy-life',
     content: `
 <p class="introduction">
   日本ワイン専門店『西麻布
@@ -69,22 +69,6 @@ export const works: Works = {
     src="/images/works/osozakura-image-design/osozakura_image_design_3.jpg"
     alt="遅桜イメージデザイン"
   />
-</p>
-    `,
-  },
-  'shizuka-box': {
-    title: 'Shizuka Box パンフレット',
-    slug: 'shizuka-box',
-    thumbSrc: shizukaBoxThumb,
-    tag: 'Paper / Design',
-    nextPageSlug: 'osozakura',
-    content: `
-<p class="introduction">Shizuka Boxの紹介文が入ります</p>
-<p class="img">
-  <img src="/images/works/shizuka-box/shizuka_box_1.png" alt="Shizuka Box 制作例" />
-</p>
-<p class="img">
-  <img src="/images/works/shizuka-box/shizuka_box_2.png" alt="Shizuka Box 制作例" />
 </p>
     `,
   },
