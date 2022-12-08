@@ -60,7 +60,7 @@ export const WorksContentWrapper = withTheme(
       '.introduction': {
         paddingBottom: '4rem',
       },
-      '.img, img-full': {
+      '.img, .img-full': {
         paddingBottom: '6rem',
       },
     },
