@@ -46,6 +46,7 @@ export const H1 = withTheme(
         width: 0,
         backgroundColor: theme.colorPalettes.white,
         transition: `width ${theme.animationDuration.slow} ${theme.animationTimingFunction.default}`,
+        pointerEvents: 'none',
       },
       '&:hover::before': {
         width: '100%',
