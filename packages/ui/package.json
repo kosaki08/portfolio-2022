@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@portfolio-2022/theme": "workspace:^*",
-    "@portfolio-2022/utils": "workspace:^*"
+    "@portfolio-2022/utils": "workspace:^*",
+    "framer-motion": "^7.6.17"
   }
 }
