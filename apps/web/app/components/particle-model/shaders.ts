@@ -40,6 +40,6 @@ export const fragmentShader = glsl`
 		float depth = vPosition.z * 0.5 + 0.5;
 		vec3 color = mix(uColor1, uColor2, depth);
 
-		gl_FragColor = vec4(color, depth * 0.1 + 0.2);
+		gl_FragColor = vec4(color, depth * 0.1 + 0.3);
 	}
 `;

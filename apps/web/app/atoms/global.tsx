@@ -8,7 +8,7 @@ export interface GlobalState {
 export const GlobalState = atom<GlobalState>({
   key: 'globalState',
   default: {
-    isTransition: true,
+    isTransition: false,
     isMenuOpen: false,
   },
 });

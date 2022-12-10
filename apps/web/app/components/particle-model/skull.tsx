@@ -21,7 +21,7 @@ const skullUniforms: ParticleUniforms = {
 
 export const SkullParticle: FC<SkullParticleProps> = memo((props) => {
   const { isTransition } = props;
-  const scale = useSpring(isTransition ? 3 : 1, { duration: DURATION, velocity: VELOCITY });
+  const scale = useSpring(isTransition ? 1 : 3, { duration: DURATION, velocity: VELOCITY });
   const shaderMaterial = useRef<ParticleShaderMaterial>(null);
 
   const { nodes } = useLoader(GLTFLoader, '/models/skull.glb', (loader) => {
@@ -39,7 +39,7 @@ export const SkullParticle: FC<SkullParticleProps> = memo((props) => {
   useFrame(({ clock }) => {
     if (!shaderMaterial.current) return;
     shaderMaterial.current.uniforms.uTime.value = clock.getElapsedTime();
-    scale.set(isTransition ? 3 : 1);
+    scale.set(isTransition ? 1 : 3);
     shaderMaterial.current.uniforms.uScale.value = scale.get();
   });
 

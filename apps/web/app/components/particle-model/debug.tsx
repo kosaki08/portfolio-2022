@@ -10,7 +10,7 @@ export const Debug: FC = () => {
 
     useControls('Particle', {
       isTransition: {
-        value: true,
+        value: false,
         onChange: (value) => {
           setGlobalState((prev) => ({ ...prev, isTransition: value }));
         },

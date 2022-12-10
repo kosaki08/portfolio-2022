@@ -77,7 +77,7 @@ export const works: Works = {
     tag: 'Paper / Design',
     nextPageSlug: 'osozakura-image-design',
     content: `
-<p class="introduction">個人用の名刺をブルゴーニュの白ワインのラベルをモチーフに制作しました。
+<p class="introduction">個人用の名刺をワインのラベルをモチーフに制作しました。
   <br />
   表側には、富士山や駿河湾、清水の街を一望できる、静岡市の日本平から撮影した写真をスケッチ風に加工した画像やタイムスタンプで変換した生年月日、静岡という文字をフランス語に当てた文字などを入れています。
   <br />
