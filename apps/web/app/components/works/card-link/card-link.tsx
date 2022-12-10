@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import Image, { ImageProps } from 'next/image';
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
-import Image, { ImageProps } from 'next/image';
+import { ScrollReveal } from '@portfolio-2022/ui';
 
 const ImageWrapper = withTheme(
   styled.div(({ theme }) => ({
@@ -61,23 +62,27 @@ export const CardLink: FC<CardLinkProps> = (props) => {
   const { href, title, tag, thumbSrc } = props;
   return (
     <div>
-      <Link href={href}>
-        <ImageWrapper>
-          <Image
-            src={thumbSrc}
-            alt={title}
-            sizes="100vw"
-            fill
-            style={{
-              objectPosition: '50% 70%',
-            }}
-          />
-        </ImageWrapper>
-      </Link>
-      <H3>
-        <Link href={href}>{title}</Link>
-      </H3>
-      <Tag>{tag}</Tag>
+      <ScrollReveal>
+        <Link href={href}>
+          <ImageWrapper>
+            <Image
+              src={thumbSrc}
+              alt={title}
+              sizes="100vw"
+              fill
+              style={{
+                objectPosition: '50% 70%',
+              }}
+            />
+          </ImageWrapper>
+        </Link>
+      </ScrollReveal>
+      <ScrollReveal>
+        <H3>
+          <Link href={href}>{title}</Link>
+        </H3>
+        <Tag>{tag}</Tag>
+      </ScrollReveal>
     </div>
   );
 };

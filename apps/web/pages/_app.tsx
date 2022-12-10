@@ -45,7 +45,7 @@ const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
 
   useEffect(() => {
     const exitingFunction = () => {
-      setGlobalState((prev) => ({ ...prev, isTransition: false }));
+      setGlobalState((prev) => ({ ...prev, isTransition: true }));
     };
     router.events.on('routeChangeStart', exitingFunction);
 
@@ -60,7 +60,7 @@ const AppComponents: FC<AppProps> = ({ Component, pageProps }) => {
       initial={false}
       onExitComplete={() => {
         window.scrollTo(0, 0);
-        setGlobalState((prev) => ({ ...prev, isTransition: true }));
+        setGlobalState((prev) => ({ ...prev, isTransition: false }));
       }}
     >
       <Fragment key={asPath}>

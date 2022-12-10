@@ -1,5 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next';
+import JsxParser from 'react-jsx-parser';
 import { ParsedUrlQuery } from 'querystring';
+import { ScrollReveal } from '@portfolio-2022/ui';
 import { Contents, Inner, Main, WorksContentWrapper } from '../../app/components/sub-pages/elements';
 import { PageContainer } from '../../app/components/page-container';
 import { NextPageNav } from '../../app/components/next-page-nav';
@@ -37,7 +39,10 @@ export default function WorksDetail(props: WorksDetailProps) {
         <Inner>
           <WorksHeader {...worksHeader} />
           <WorksContentWrapper>
-            <Contents dangerouslySetInnerHTML={{ __html: content }} />
+            <Contents>
+              {/** @ts-ignore Related react-jsx-parser issue: https://github.com/TroyAlford/react-jsx-parser/issues/234#issuecomment-1282007040 */}
+              <JsxParser components={{ ScrollReveal }} jsx={content} />
+            </Contents>
           </WorksContentWrapper>
         </Inner>
         {nextWork && <NextPageNav href={nextPageSlug} src={nextThumbSrc} text="Next Work" />}

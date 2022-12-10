@@ -4,6 +4,7 @@ import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
 import { myName } from '../../constants';
+import { ScrollReveal } from '@portfolio-2022/ui';
 
 const Root = withTheme(
   styled.footer(({ theme }) => ({
@@ -29,15 +30,17 @@ export const Footer: FC = () => {
     return null;
   }
   return (
-    <Root>
-      <p>
-        &copy; {`Copyright ${myName}`}
-        <span className="hidden">&nbsp;</span>
-        <span className="visible">
-          <br />
-        </span>
-        All Rights Reserved.
-      </p>
-    </Root>
+    <ScrollReveal>
+      <Root>
+        <p>
+          &copy; {`Copyright ${myName}`}
+          <span className="hidden">&nbsp;</span>
+          <span className="visible">
+            <br />
+          </span>
+          All Rights Reserved.
+        </p>
+      </Root>
+    </ScrollReveal>
   );
 };

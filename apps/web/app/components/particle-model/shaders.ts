@@ -11,16 +11,17 @@ export const vertexShader = glsl`
 	void main() {
 		vPosition = position;
 
-		float time = uTime * 4.;
+		float time = uTime * 1.1;
 
 		vec3 pos = vPosition;
-		pos.x += sin(time * aRandom.x) * 0.002;
-		pos.y += cos(time * aRandom.y) * 0.002;
-		pos.z += cos(time * aRandom.z) * 0.002;
+		pos.x += sin(time * aRandom.x) * 0.02;
+		pos.y += cos(time * aRandom.y) * 0.02;
+		pos.z += cos(time * aRandom.z) * 0.02;
 
-		pos.x *= uScale + sin(pos.y * 3. + time * .05) * (1. - uScale) * 2.;
+		pos.x *= uScale + sin(pos.y * 3. + time * .1) * (1. - uScale) * 2.;
 		pos.y *= uScale + cos(pos.z * 3. + time * .05) * (1. - uScale) * 2.;
-		pos.z *= uScale + sin(pos.x * 3. + time * .05) * (1. - uScale) * 2.;
+		pos.z *= uScale + sin(pos.x * 3. + time * .1) * (1. - uScale) * 2.;
+
 
 		pos *= uScale;
 
@@ -40,6 +41,6 @@ export const fragmentShader = glsl`
 		float depth = vPosition.z * 0.5 + 0.5;
 		vec3 color = mix(uColor1, uColor2, depth);
 
-		gl_FragColor = vec4(color, depth * 0.1 + 0.2);
+		gl_FragColor = vec4(color, depth * 0.1 + 0.25);
 	}
 `;
