@@ -66,7 +66,7 @@ Version information is in `.tool-versions` file.
 
 ## Special Thanks
 
-Great resources for learning.
+Great resources for learning:
 
 - [Three.js Journey](https://threejs-journey.com/): Three.js
 - [WebGL School](https://webgl.souhonzan.org/?category=tagged&v=school): WebGL
