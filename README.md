@@ -2,8 +2,6 @@
 
 ## Installation
 
-From your terminal:
-
 ```sh
 pnpm install
 pnpm prepare
