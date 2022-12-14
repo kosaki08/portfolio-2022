@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { motion, Variants } from 'framer-motion';
 import { FC, useCallback } from 'react';
 import { LinkItem } from '../../nav-links';
 import { TextWrapper } from './elements';
@@ -8,6 +9,20 @@ export interface NavItemProps {
   link: LinkItem;
   onClickItem?: OnClickItemCallback;
 }
+
+const variants: Variants = {
+  hidden: {
+    y: 50,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.25,
+    },
+  },
+};
 
 export const NavItem: FC<NavItemProps> = (props) => {
   const { link, onClickItem } = props;
@@ -19,11 +34,11 @@ export const NavItem: FC<NavItemProps> = (props) => {
   }, [href, text, onClickItem]);
 
   return (
-    <li>
+    <motion.li initial="hidden" animate="visible" variants={variants}>
       <TextWrapper isCurrent={pathname === href} href={href} onClick={onClickCallback}>
         {text}
       </TextWrapper>
-    </li>
+    </motion.li>
   );
 };
 NavItem.displayName = 'NavItem';

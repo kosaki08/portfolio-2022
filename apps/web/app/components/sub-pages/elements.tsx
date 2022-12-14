@@ -5,7 +5,7 @@ import { getMediaQuery } from '@portfolio-2022/utils';
 export const Main = styled.main(() => ({
   display: 'flex',
   flexDirection: 'column',
-  minHeight: '100%',
+  minHeight: '100vh',
 }));
 
 export const Inner = styled.div(() => ({
