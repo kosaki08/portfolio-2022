@@ -3,10 +3,12 @@ import { useRecoilState } from 'recoil';
 import { Color, Mesh, Shader, ShaderMaterial, Vector3 } from 'three';
 import { Canvas } from '@react-three/fiber';
 import { Portal } from '@portfolio-2022/ui';
+import { theme } from '@portfolio-2022/theme';
 import { SkullParticle } from './skull';
 import { Root } from './elements';
 import { GlobalState } from '../../atoms';
 import { Debug } from './debug';
+import { useWindowSize } from '../../hooks';
 
 export type ShaderUniforms = Shader['uniforms'];
 
@@ -27,8 +29,13 @@ export const DURATION = 50;
 export const VELOCITY = 10;
 
 export const ParticleModel: FC = () => {
+  const { windowWidth } = useWindowSize();
   const [globalState] = useRecoilState(GlobalState);
   const { isTransition, isMenuOpen } = globalState;
+
+  if (windowWidth < theme.breakPoints.md) {
+    return null;
+  }
 
   return (
     <Portal>
