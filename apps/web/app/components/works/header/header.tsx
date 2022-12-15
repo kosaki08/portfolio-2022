@@ -143,7 +143,7 @@ export const WorksHeader: FC<WorksHeaderProps> = (props) => {
           <h1>{title}</h1>
           <p>{tag}</p>
           {link && (
-            <a href={link} target="_blank" rel="noreferrer">
+            <a href={link} target="_blank" rel="noopener noreferrer">
               Visit Site
             </a>
           )}
