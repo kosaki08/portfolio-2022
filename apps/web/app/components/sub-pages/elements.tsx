@@ -70,6 +70,7 @@ export const WorksContentWrapper = withTheme(
 export const Contents = withTheme(
   styled.div(({ theme }) => ({
     h2: {
+      paddingTop: '1rem',
       paddingBottom: '.5rem',
       fontSize: theme.fontSizes.large,
       '&:not(:first-of-type)': {
