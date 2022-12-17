@@ -1,0 +1,20 @@
+version: "3"
+
+volumes:
+  database:
+    driver: local
+
+services:
+  db:
+    platform: linux/amd64
+    image: postgres:13
+    container_name: database
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: strongpassword
+      POSTGRES_DB: portfolio-2022
+    volumes:
+      - database:/var/lib/postgresql
