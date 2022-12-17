@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { GetServerSideProps } from 'next';
+import { prisma } from '@portfolio-2022/database';
 import { MainVisual, SVGText } from '../../app/components/sub-pages/main-visual';
 import { ContentWrapper, Inner, Main } from '../../app/components/sub-pages/elements';
 import { PageContainer } from '../../app/components/page-container';
