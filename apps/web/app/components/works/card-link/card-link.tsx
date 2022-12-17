@@ -1,10 +1,12 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 import { withTheme } from '@emotion/react';
 import styled from '@emotion/styled';
 import { getMediaQuery } from '@portfolio-2022/utils';
 import { ScrollReveal } from '@portfolio-2022/ui';
+import { worksThumb } from '../works-data';
+import { WorksPageKey } from '../../../constants';
 
 const ImageWrapper = withTheme(
   styled.div(({ theme }) => ({
@@ -53,20 +55,22 @@ const Tag = withTheme(
 
 export interface CardLinkProps {
   href: string;
+  slug: WorksPageKey;
   title: string;
   tag: string;
-  thumbSrc: ImageProps['src'];
 }
 
 export const CardLink: FC<CardLinkProps> = (props) => {
-  const { href, title, tag, thumbSrc } = props;
+  const { href, title, tag, slug } = props;
+  const src = worksThumb[slug];
+
   return (
     <div>
       <ScrollReveal>
         <Link href={href}>
           <ImageWrapper>
             <Image
-              src={thumbSrc}
+              src={src}
               alt={title}
               sizes="100vw"
               fill
