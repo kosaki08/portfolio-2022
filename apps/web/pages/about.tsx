@@ -38,9 +38,9 @@ export default function About() {
                   サイトの制作についてもおまかせ下さい。
                   <br />※ 当サイトのソースコードは{' '}
                   <a href="https://github.com/kosaki08/portfolio-2022" rel="noopener noreferrer" target="_blank">
-                    GitHub
-                  </a>{' '}
-                  上にアップしています。
+                    GitHub 上
+                  </a>
+                  にアップしています。
                 </p>
               </ScrollReveal>
               <ScrollReveal>
