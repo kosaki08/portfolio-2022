@@ -84,6 +84,12 @@ export const Contents = withTheme(
       lineHeight: 1.75,
       listStyleType: 'circle',
     },
+    a: {
+      textDecoration: 'underline',
+      '&:hover': {
+        textDecoration: 'none',
+      },
+    },
   })),
 );
 

@@ -34,8 +34,13 @@ export default function About() {
                 <p>
                   これまで、大企業から個人事業主のサイトまで、様々なタイプのサイトやアプリケーションを制作してきました。
                   制作時には見やすく分かりやすい、ユーザーフレンドリーなサイト制作を目指しています。
-                  <br />※ 当サイトは Next.js (React.js)や React Three Fiber, Turborepo 等で制作しています。Vue.js、WordPress
+                  <br />※ 当サイトは Next.js (React.js)や React Three Fiber, Turborepo 等で制作しています。Vue.js や WordPress
                   サイトの制作についてもおまかせ下さい。
+                  <br />※ 当サイトのソースコードは{' '}
+                  <a href="https://github.com/kosaki08/portfolio-2022" rel="noopener noreferrer" target="_blank">
+                    GitHub
+                  </a>{' '}
+                  上にアップしています。
                 </p>
               </ScrollReveal>
               <ScrollReveal>
