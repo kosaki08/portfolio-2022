@@ -1,6 +1,6 @@
 # Portfolio 2022
 
-## Live Demo
+## Live demo
 
 [https://portfolio-2022-turbo-next.vercel.app/](https://portfolio-2022-turbo-next.vercel.app/)
 
